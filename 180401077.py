@@ -102,7 +102,7 @@ def main():
     
     #Dosyaya katsayıları yazdık.
     f=open('sonuc.txt','w')
-    f.write("Yazim biçimi 1.için bx,a       2.için cx²,bx,a     3.için dx³,cx²,bx,a .... \n")
+    f.write("Yazim biçimi 1.için a,bx       2.için a,bx,cx²     3.için a,bx,cx²,dx³ .... \n")
     f.close()
     for i in range(6):
         with open('sonuc.txt','a') as f:
