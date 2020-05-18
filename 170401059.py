@@ -82,9 +82,18 @@ def egriye_uydurma(derece,veriler):
 
 
 dosya = open("veriler.txt","r")
-veriler = dosya.readlines()
+icerik = dosya.read()
+veriler = icerik.split("\n")
+j=0
 for i in range(len(veriler)):
-    veriler[i]=int(veriler[i])
+    if veriler[j] == '':
+        veriler.remove(veriler[j])
+        j+=-1
+    j+=1
+for i in range(len(veriler)):
+    veriler[i] = int(veriler[i])
+
+
 #fonksiyonlar x=1 ile başlıyordur..
 
 
