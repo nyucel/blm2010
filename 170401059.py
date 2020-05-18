@@ -82,18 +82,9 @@ def egriye_uydurma(derece,veriler):
 
 
 dosya = open("veriler.txt","r")
-icerik = dosya.read()
-veriler = icerik.split("\n")
-j=0
+veriler = dosya.readlines()
 for i in range(len(veriler)):
-    if veriler[j] == '':
-        veriler.remove(veriler[j])
-        j+=-1
-    j+=1
-for i in range(len(veriler)):
-    veriler[i] = int(veriler[i])
-
-
+    veriler[i]=int(veriler[i])
 #fonksiyonlar x=1 ile başlıyordur..
 
 
@@ -120,6 +111,5 @@ for i in range(len(veriler)//10):#ödev part3 -> sadece 10 lu grupları alıyor.
     p4,r4=egriye_uydurma(4,onlu_grup)
     p5,r5=egriye_uydurma(5,onlu_grup)
     p6,r6=egriye_uydurma(6,onlu_grup)
-    katsayilari_yazdirma(p1,p2,p3,p4,p5,p6,dosya2)
     korelasyon_katsayilari_ile_uygun_polinomu_bulma(r1,r2,r3,r4,r5,r6,dosya2)
 dosya2.close()
