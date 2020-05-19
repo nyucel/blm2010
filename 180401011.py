@@ -20,16 +20,16 @@ def polinomaUydurma(pDerece,vakalar): # Polinomun derecesini ve verileri alarak 
             toplam += vakalar[j]*(j+1)**i
         sonuc.append(toplam)
     for i in range(pDerece+1):
-        benzetme = matris[i][i]
+        b = matris[i][i]
         for j in range(i+1,pDerece+1):
-            bolum = benzetme/matris[j][i]
+            bolum = b/matris[j][i]
             sonuc[j] = sonuc[j]*bolum-sonuc[i]
             for k in range(pDerece+1):
                 matris[j][k] = matris[j][k]*bolum-matris[i][k]  
     for i in range(pDerece,-1,-1):
-        benzetme = matris[i][i]
+        b = matris[i][i]
         for j in range(i-1,-1,-1):
-            bolum = benzetme/matris[j][i]
+            bolum = b/matris[j][i]
             sonuc[j] = sonuc[j]*bolum-sonuc[i]
             for k in range(pDerece+1):
                 matris[j][k] = matris[j][k]*bolum-matris[i][k]
@@ -39,11 +39,11 @@ def polinomaUydurma(pDerece,vakalar): # Polinomun derecesini ve verileri alarak 
     for i in range (len(vakalar)):
         yOrt += vakalar[i]
     yOrt = yOrt/len(vakalar)
-    St=0
-    Sr=0
+    St = 0
+    Sr = 0
     for i in range(len(vakalar)):
         x = vakalar[i]
-        St +=(vakalar[i]-yOrt)**2
+        St += (vakalar[i]-yOrt)**2
         for j in range(len(sonuc)):
             x -= sonuc[j]*(i+1)**j
         x=x**2
@@ -72,16 +72,16 @@ def uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya)
 dosya = open("veriler.txt","r")
 vakalar = dosya.readlines()
 for i in range(len(vakalar)):
-    vakalar[i]=int(vakalar[i])
+    vakalar[i] = int(vakalar[i])
 
 
 
-polinom1,katsayi1=polinomaUydurma(1,vakalar)
-polinom2,katsayi2=polinomaUydurma(2,vakalar)
-polinom3,katsayi3=polinomaUydurma(3,vakalar)   #Polinomların katsayılarını hesaplama işlemini yapıyorum. (79-84. satılar)
-polinom4,katsayi4=polinomaUydurma(4,vakalar)
-polinom5,katsayi5=polinomaUydurma(5,vakalar)
-polinom6,katsayi6=polinomaUydurma(6,vakalar)
+polinom1,katsayi1 = polinomaUydurma(1,vakalar)
+polinom2,katsayi2 = polinomaUydurma(2,vakalar)
+polinom3,katsayi3 = polinomaUydurma(3,vakalar)   #Polinomların katsayılarını hesaplama işlemini yapıyorum. (79-84. satılar)
+polinom4,katsayi4 = polinomaUydurma(4,vakalar)
+polinom5,katsayi5 = polinomaUydurma(5,vakalar)
+polinom6,katsayi6 = polinomaUydurma(6,vakalar)
 
 dosya.close()
 dosya2 = open("sonuc.txt","w")
@@ -89,16 +89,16 @@ katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya
 uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya2)#en uygun olan polinomu seçiyorum.
 for i in range(len(vakalar)//10):#10 lu gruplar şeklinde kontrol yapıyorum.
     dosya2.write("\n"+str(i+1)+". 10'lu grup : \n")
-    onluGruplar=[]
+    onluGruplar = []
     for j in range(10):
         onluGruplar.append(vakalar[10*i+j])
     
-    polinom1,katsayi1=polinomaUydurma(1,onluGruplar)
-    polinom2,katsayi2=polinomaUydurma(2,onluGruplar)
-    polinom3,katsay3=polinomaUydurma(3,onluGruplar)
-    polinom4,katsayi4=polinomaUydurma(4,onluGruplar)
-    polinom5,katsayi5=polinomaUydurma(5,onluGruplar)
-    polinom6,katsayi6=polinomaUydurma(6,onluGruplar)
+    polinom1,katsayi1 = polinomaUydurma(1,onluGruplar)
+    polinom2,katsayi2 = polinomaUydurma(2,onluGruplar)
+    polinom3,katsay3 = polinomaUydurma(3,onluGruplar)
+    polinom4,katsayi4 = polinomaUydurma(4,onluGruplar)
+    polinom5,katsayi5 = polinomaUydurma(5,onluGruplar)
+    polinom6,katsayi6 = polinomaUydurma(6,onluGruplar)
     katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya2)
     uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya2)
 dosya2.close()
