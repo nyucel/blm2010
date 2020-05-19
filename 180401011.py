@@ -52,20 +52,20 @@ def polinomaUydurma(pDerece,vakalar): # Polinomun derecesini ve verileri alarak 
     return sonuc,korelasyon
 
 def katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya):
-    dosya2.write("1.dereceden polinom : a0 = "+str(polinom1[0]) + " a1 = " + str(polinom1[1])+"\n" )
-    dosya2.write("2.dereceden polinom : a0 = "+str(polinom2[0]) + " a1 = " + str(polinom2[1]) + " a2 =" + str(polinom2[2]) + "\n")
-    dosya2.write("3.dereceden polinom : a0 = "+str(polinom3[0]) + " a1 = " + str(polinom3[1]) + " a2 =" + str(polinom3[2]) + " a3 = " + str(polinom3[3]) + "\n")
-    dosya2.write("4.dereceden polinom : a0 = "+str(polinom4[0]) + " a1 = " + str(polinom4[1]) + " a2 =" + str(polinom4[2]) + " a3 = " + str(polinom4[3]) + " a4 = " + str(polinom4[4]) + "\n")
-    dosya2.write("5.dereceden polinom : a0 = "+str(polinom5[0]) + " a1 = " + str(polinom5[1]) + " a2 =" + str(polinom5[2]) + " a3 = " + str(polinom5[3]) + " a4 = " + str(polinom5[4]) + " a5 = "+ str(polinom5[5])+ "\n")
-    dosya2.write("6.dereceden polinom : a0 = "+str(polinom6[0]) + " a1 = " + str(polinom6[1]) + " a2 =" + str(polinom6[2]) + " a3 = " + str(polinom6[3]) + " a4 = " + str(polinom6[4]) + " a5 = "+ str(polinom6[5])+" a6 = "+str(polinom6[6])+ "\n")
+    dosya.write("1.dereceden polinom : a0 = "+str(polinom1[0]) + " a1 = " + str(polinom1[1])+"\n" )
+    dosya.write("2.dereceden polinom : a0 = "+str(polinom2[0]) + " a1 = " + str(polinom2[1]) + " a2 =" + str(polinom2[2]) + "\n")
+    dosya.write("3.dereceden polinom : a0 = "+str(polinom3[0]) + " a1 = " + str(polinom3[1]) + " a2 =" + str(polinom3[2]) + " a3 = " + str(polinom3[3]) + "\n")
+    dosya.write("4.dereceden polinom : a0 = "+str(polinom4[0]) + " a1 = " + str(polinom4[1]) + " a2 =" + str(polinom4[2]) + " a3 = " + str(polinom4[3]) + " a4 = " + str(polinom4[4]) + "\n")
+    dosya.write("5.dereceden polinom : a0 = "+str(polinom5[0]) + " a1 = " + str(polinom5[1]) + " a2 =" + str(polinom5[2]) + " a3 = " + str(polinom5[3]) + " a4 = " + str(polinom5[4]) + " a5 = "+ str(polinom5[5])+ "\n")
+    dosya.write("6.dereceden polinom : a0 = "+str(polinom6[0]) + " a1 = " + str(polinom6[1]) + " a2 =" + str(polinom6[2]) + " a3 = " + str(polinom6[3]) + " a4 = " + str(polinom6[4]) + " a5 = "+ str(polinom6[5])+" a6 = "+str(polinom6[6])+ "\n")
 
 
 def uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya):
-    dosya2.write("katsayi1 = "+str(katsayi1)+" katsayi2 = "+str(katsayi2)+" katsayi 3 = "+str(katsayi3)+" katsayi4 = "+str(katsayi4)+" katsayi5 = "+str(katsayi5)+" katsayi6 = "+str(katsayi6)+"\n")
+    dosya.write("katsayi1 = "+str(katsayi1)+" katsayi2 = "+str(katsayi2)+" katsayi 3 = "+str(katsayi3)+" katsayi4 = "+str(katsayi4)+" katsayi5 = "+str(katsayi5)+" katsayi6 = "+str(katsayi6)+"\n")
     degerler = [katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6]
     for i in range(len(degerler)):
         if degerler[i] == max(degerler):
-             dosya2.write("korelasyon katsayisi 1 e en yakin olan sayi "+str(degerler[i])+" dir.Polinomlar arasinda en uygun olan "+str(i+1)+". polinomdur.\n")
+             dosya.write("korelasyon katsayisi 1 e en yakin olan sayi "+str(degerler[i])+" dir.Polinomlar arasinda en uygun olan "+str(i+1)+". polinomdur.\n")
 
 
 #main(işlemlerin yapıldığı) kısım
@@ -84,11 +84,11 @@ polinom5,katsayi5=polinomaUydurma(5,vakalar)
 polinom6,katsayi6=polinomaUydurma(6,vakalar)
 
 dosya.close()
-dosya2 = open("sonuc.txt","w")
-katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya2)#katsayıları yazdırıyorum.
-uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya2)#en uygun olan polinomu seçiyorum.
+dosya = open("sonuc.txt","w")
+katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya)#katsayıları yazdırıyorum.
+uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya)#en uygun olan polinomu seçiyorum.
 for i in range(len(vakalar)//10):#10 lu gruplar şeklinde kontrol yapıyorum.
-    dosya2.write("\n"+str(i+1)+". 10'lu grup : \n")
+    dosya.write("\n"+str(i+1)+". 10'lu grup : \n")
     onluGruplar=[]
     for j in range(10):
         onluGruplar.append(vakalar[10*i+j])
@@ -99,6 +99,6 @@ for i in range(len(vakalar)//10):#10 lu gruplar şeklinde kontrol yapıyorum.
     polinom4,katsayi4=polinomaUydurma(4,onluGruplar)
     polinom5,katsayi5=polinomaUydurma(5,onluGruplar)
     polinom6,katsayi6=polinomaUydurma(6,onluGruplar)
-    katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya2)
-    uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya2)
-dosya2.close()
+    katsayilari_yazdirma(polinom1,polinom2,polinom3,polinom4,polinom5,polinom6,dosya)
+    uygunPolinomSec(katsayi1,katsayi2,katsayi3,katsayi4,katsayi5,katsayi6,dosya)
+dosya.close()
