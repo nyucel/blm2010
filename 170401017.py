@@ -11,6 +11,7 @@ with open("veriler.txt","r",encoding='utf-8') as file: #dosya okuma
         vaka_liste.append(int(i))
         
 #print(vaka_liste)
+
 import math
 def gauss(A):
     n = len(A)
@@ -127,6 +128,13 @@ def ortalamaBul(veriler):
         toplam+=i
         return toplam
     return toplam/len(veriler)
+def stop(veriler):
+    sd = 0 
+    
+    for i in range(0,len(veriler)):
+        sd += (i - ortalamaBul(veriler)) ** 2
+    
+    return sd
 
 def standart(veriler):
     sd = 0 
@@ -137,7 +145,7 @@ def standart(veriler):
     return sd
 
 def korelasyonBul(veriler):
-    return ((abs((St(veriler)-standart(veriler)))/St(veriler)))**(1/2)
+    return ((abs((stop(veriler)-standart(veriler)))/stop(veriler)))**(1/2)
 
 aa=korelasyonBul(a)
 #print(aa)
@@ -229,4 +237,3 @@ while(son<len(vaka_liste)):
         dosya.write("6.derece polinom onlu grup")
         dosya.write(str(onlugrupp))
 dosya.close()
-
