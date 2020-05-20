@@ -1,3 +1,10 @@
+
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 #Ceyda Kamalı 180401054
 def rbulma(r1,r2,r3,r4,r5,r6,file):
     file.write("polinomlarda elde ettigimiz r degerini kiyaslayip hangisi 1 e yakınsa onu seciyoruz"+"\n")
@@ -76,6 +83,7 @@ multiple(pol1,pol2,pol3,pol4,pol5,pol6,file)
 rbulma(r1,r2,r3,r4,r5,r6,file)
 
 for i in range(len(event)//10):
+    file.write("\n"+str(i+1)+". ONLU grup : \n")
     grup=[]
     for j in range(10):
         grup.append(event[10*i+j])
