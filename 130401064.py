@@ -1,3 +1,4 @@
+# Süleyman Baltacı - 130401064
 # -*- coding: utf-8 -*-
 import numpy as np
 
