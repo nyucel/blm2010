@@ -73,10 +73,7 @@ def korelasyon_ve_hata(x,y,n,katsayilar,m):
         Sr_1 = Sr_1**2
         Sr+=Sr_1
     S_y_x = math.sqrt(abs(Sr/(n-(m+1)))) #Standart tahmini hata
-    if(St==0):
-        r = "inf"
-    else:
-        r = math.sqrt(abs((St-Sr)/St)) #korelasyon
+    r = math.sqrt(abs((St-Sr)/St)) #korelasyon
     return r,S_y_x
 
 def polinom_yakinlastirma(x,y,dosya):
