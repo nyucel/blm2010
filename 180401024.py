@@ -56,6 +56,15 @@ def polinoma_cevirme(derece,veriler):
     korelasyon = ((St-Sr)/St)**(1/2)
     return sonuc,korelasyon
 
+def polinom_katsayilari(p1,p2,p3,p4,p5,p6,dosya):
+    dosya2.write("1.dereceden polinom : a0 = "+str(p1[0]) + " a1 = " + str(p1[1])+"\n" )
+    dosya2.write("2.dereceden polinom : a0 = "+str(p2[0]) + " a1 = " + str(p2[1]) + " a2 =" + str(p2[2]) + "\n")
+    dosya2.write("3.dereceden polinom : a0 = "+str(p3[0]) + " a1 = " + str(p3[1]) + " a2 =" + str(p3[2]) + " a3 = " + str(p3[3]) + "\n")
+    dosya2.write("4.dereceden polinom : a0 = "+str(p4[0]) + " a1 = " + str(p4[1]) + " a2 =" + str(p4[2]) + " a3 = " + str(p4[3]) + " a4 = " + str(p4[4]) + "\n")
+    dosya2.write("5.dereceden polinom : a0 = "+str(p5[0]) + " a1 = " + str(p5[1]) + " a2 =" + str(p5[2]) + " a3 = " + str(p5[3]) + " a4 = " + str(p5[4]) + " a5 = "+ str(p5[5])+ "\n")
+    dosya2.write("6.dereceden polinom : a0 = "+str(p6[0]) + " a1 = " + str(p6[1]) + " a2 =" + str(p6[2]) + " a3 = " + str(p6[3]) + " a4 = " + str(p6[4]) + " a5 = "+ str(p6[5])+" a6 = "+str(p6[6])+ "\n")
+
+
 def en_uygun_polinom(k1,k2,k3,k4,k5,k6,dosya):
     dosya2.write("katsayi1 = "+str(k1)+" katsayi2 = "+str(k2)+" katsayi 3 = "+str(k3)+" katsayi4 = "+str(k4)+" katsayi5 = "+str(k5)+" katsayi6 = "+str(k6)+"\n")
     degerler = [k1,k2,k3,k4,k5,k6]
@@ -63,13 +72,6 @@ def en_uygun_polinom(k1,k2,k3,k4,k5,k6,dosya):
         if degerler[i] == max(degerler):
              dosya2.write("En uygun olan "+str(i+1)+". polinomdur.\n")
 
-def polinom_katsayilari(p1,p2,p3,p4,p5,p6,dosya):
-    dosya2.write("1.dereceden polinom : a0 = "+str(p1[0]) + " a1 = " + str(1[1])+"\n" )
-    dosya2.write("2.dereceden polinom : a0 = "+str(p2[0]) + " a1 = " + str(p2[1]) + " a2 =" + str(p2[2]) + "\n")
-    dosya2.write("3.dereceden polinom : a0 = "+str(p3[0]) + " a1 = " + str(p3[1]) + " a2 =" + str(p3[2]) + " a3 = " + str(p3[3]) + "\n")
-    dosya2.write("4.dereceden polinom : a0 = "+str(p4[0]) + " a1 = " + str(p4[1]) + " a2 =" + str(p4[2]) + " a3 = " + str(p4[3]) + " a4 = " + str(p4[4]) + "\n")
-    dosya2.write("5.dereceden polinom : a0 = "+str(p5[0]) + " a1 = " + str(p5[1]) + " a2 =" + str(p5[2]) + " a3 = " + str(p5[3]) + " a4 = " + str(p5[4]) + " a5 = "+ str(5[5])+ "\n")
-    dosya2.write("6.dereceden polinom : a0 = "+str(p6[0]) + " a1 = " + str(p6[1]) + " a2 =" + str(p6[2]) + " a3 = " + str(p6[3]) + " a4 = " + str(p6[4]) + " a5 = "+ str(p6[5])+" a6 = "+str(p6[6])+ "\n")
 
 dosya = open("veriler.txt","r")
 veriler = dosya.readlines()
