@@ -12,7 +12,7 @@ katsayilar_matrisi = []
 
 def dosya_oku(dosya="veriler.txt",veriler_x=veriler_x,veriler_y=veriler_y): #içerisine bir dosya ve boş bir dizi alır.
     with open('veriler.txt', 'r') as f: 
-        veriler_y[0].extend(map(int,f.read().splitlines()))  #\n göstermeden dosyanın içindeki satırları dizinin içerisine aktarıyor.
+        veriler_y[0].extend(map(int,f.read().splitlines()))  #\n göstermeden dosyanın içindeki satırları dizinin içerisine aktarıyor ve integer yapıyor.
     for i in range(len(veriler_y[0])):
         veriler_x[0].append(i+1)
     
