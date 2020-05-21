@@ -152,16 +152,13 @@ dosyaOku()
 veriBulma(0,len(veriler))  # önce burada bütün veriler için sonuçları vs bulup korelasyonu bulduk
 
 bas = 0
-son = 10   # for i in range (bas,son) olacağı için 0dan 9'a akadar alacak 
+son = 10   # for i in range (bas,son) olacağı için 0 dan 9'a akadar alacak 
 # daha sonra da 10ar 10ar alıp 1den 6. dereceye kadar yaklaştırıp en iyi korelasyon hangi derecede ise onları yazdırdık
-while(son<len(veriler)): 
+while(son<=len(veriler)): 
        veriBulma (bas,son)
        bas = bas+10
        son = son+10
 
-#veriBulma (bas,son-1)   # 0dan 58. indexe kadar gidecek ama 10ar attırırsam 40-49 da kalır o yüzden en sona 
-
-# manuel olarak son 8.liyi alıyorum
 
 
                 
