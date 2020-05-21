@@ -154,7 +154,7 @@ veriBulma(0,len(veriler))  # önce burada bütün veriler için sonuçları vs b
 bas = 0
 son = 10   # for i in range (bas,son) olacağı için 0dan 9'a akadar alacak 
 # daha sonra da 10ar 10ar alıp 1den 6. dereceye kadar yaklaştırıp en iyi korelasyon hangi derecede ise onları yazdırdık
-while(son<len(veriler)): 
+while(son<=len(veriler)): 
        veriBulma (bas,son)
        bas = bas+10
        son = son+10
