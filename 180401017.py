@@ -151,7 +151,7 @@ def yaklastirma(ilk,son):
     
 yaklastirma(0,len(degerler))  
 a = 0
-b = 9
+b = 10
 while(b<=len(degerler)):#10lu aralıklar icin yaklastirma
        yaklastirma(a,b)
        a += 10
