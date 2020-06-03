@@ -195,4 +195,4 @@ def islemleriYap(dosya):
           "Polinomsuz hesaplamada ise istediğimiz kadar parçaya bölemediğimiz için arada bu fark oluşuyor."
     yorumDosyasi.write(yorum)
     yorumDosyasi.close()
-islemleriYap('yorum-170401045.txt')
+islemleriYap('170401045_yorum.txt')
