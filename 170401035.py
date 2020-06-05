@@ -1,3 +1,5 @@
+#Hasan Avcı 170401035
+
 def Polynominal(m1, m2, m3, m4, m5, m6, file):
     file.write("m1 --> " + str(m1) + "\n")
     file.write("m2 --> " + str(m2) + "\n")
@@ -71,6 +73,7 @@ def interpolation(factor, data):
             a += 1
 
         matrix.append(line)
+
         a -= factor
 
     for i in range(factor + 1):
@@ -79,7 +82,7 @@ def interpolation(factor, data):
         for j in range(len(data)):
             total += data[j] * (j + 1) ** i
 
-            result.append(total)
+        result.append(total)
 
     for i in range(factor, -1, -1):
         simile = matrix[i][i]
@@ -104,25 +107,25 @@ def interpolation(factor, data):
     for i in range(factor + 1):
         result[i] = result[i] / matrix[i][i]
 
-    y2 = 0
+    y_r = 0
 
     for i in range(len(data)):
-        y2 += data[i]
+        y_r += data[i]
 
-    y2 = y2 / len(data)
-    y1, y2 = 0, 0
+    y_r = y_r / len(data)
+    y_rp, y_rr = 0, 0
 
     for i in range(len(data)):
         z = data[i]
-        y1 += (data[i] - y2) ** 2
+        y_rp += (data[i] - y_r) ** 2
 
         for j in range(len(result)):
             z -= result[j] * (i + 1) ** j
 
         z = z ** 2
-        y2 += z
+        y_rr += z
 
-    m = ((y1 - y2) / y1) ** (1 / 2)
+    m = ((y_rp - y_rr) / y_rp) ** (1 / 2)
     return result, m
 
 
