@@ -73,7 +73,7 @@ def matrix_inverse(old_matrix):
         for k,z in zip(matrix[i+1:],Imatrix[i+1:]):
             carpan = k[i]
             for m in range(len(k)):
-                k[m] = [m]-matrix[i][m]*carpan
+                k[m] = k[m]-matrix[i][m]*carpan
                 z[m] = z[m]-Imatrix[i][m]*carpan  
 
     for i in range(len(matrix)-1,-1,-1):
