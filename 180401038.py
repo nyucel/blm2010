@@ -1,163 +1,145 @@
-#Berat Safran 180401038
-#1. ve 2. maddeleri yapabildim. 3.'nün çıktısı yok hocam.
-import math
-list = []
-data = []
-def createListandData():
-    file = open('Veriler.txt','r')
-    i = 1
-    for veri in file:
-        data.append(int(veri))
-        list.append(i)
-        i += 1
-def yaz(katsayi,derece,deg):
-    dosya = open('sonuc.txt', 'a+')
-    dosya.write('\n')
-    dosya.write(str(derece) + '. DERECEDEN YAKLASIM \n')
+with open('veriler.txt','r') as data:
+    dataList = [int(veri) for veri in data]
+data.close()
 
-    dosya.write(' Katsayilar: ')
-    dosya.write('\n')
-    for i in katsayi:
-        dosya.write(str(i))
-        dosya.write('\t')
-    dosya.write('\n' + '-----------------------------' + '\n')
-def faultFunc(sonuclarim, first, end):
-    n = end - first
-    yi = 0
-    for i in range(first, end):
-        yi += data[i]
-    y_ussu = yi / n  # y'lerin ortalamsi
-    w1 = 0
-    for i in range(first, end):
-        w1 = (sonuclarim[i - first] - data[i]) ** 2 + w1
-    w2 = 0
-    for i in range(first, end):
-        w2 = w2 + (data[i] - y_ussu) ** 2
-    rkare = abs((w2 - w1) / w2)
-    r = math.sqrt(rkare)
-    return r
-def gauss(A):
-    boyut = len(A)
-    for i in range(0, boyut):
-        maxSutun = abs(A[i][i])
-        maxSatir = i
-        for j in range(i + 1, boyut):
-            if abs(A[j][i]) > maxSutun:
-                maxSutun = abs(A[j][i])
-                maxSatir = j
-        for k in range(i, boyut + 1):
-            temp = A[maxSatir][k]
-            A[maxSatir][k] = A[i][k]
-            A[i][k] = temp
+def xy_toplam(veriler,üs,baslangıc):
+    toplam = 0
+    for x in range(len(veriler)):
+        toplam += veriler[x]*((x+baslangıc)**üs)
+    return toplam
 
-        for l in range(i + 1, boyut):
-            c = -A[l][i] / A[i][i]
-            for j in range(i, boyut + 1):
+def xToplam(min,max,üs):
+    toplam = 0
+    for i in range (min,max+1):
+        toplam = toplam + (i**üs)
+
+    return toplam
+
+def matrisÇöz(veriMatrisi):
+    uzunluk = len(veriMatrisi)
+    for i in range(0, uzunluk):
+        max_Sutun = abs(veriMatrisi[i][i])
+        max_Satir = i
+        for j in range(i + 1, uzunluk):
+            if abs(veriMatrisi[j][i]) > max_Sutun:
+                max_Sutun = abs(veriMatrisi[j][i])
+                max_Satir = j
+        for k in range(i, uzunluk + 1):
+            temp = veriMatrisi[max_Satir][k]
+            veriMatrisi[max_Satir][k] = veriMatrisi[i][k]
+            veriMatrisi[i][k] = temp
+
+        for l in range(i + 1, uzunluk):
+            c = -veriMatrisi[l][i] / veriMatrisi[i][i]
+            for j in range(i, uzunluk + 1):
                 if i == j:
-                    A[l][j] = 0
+                    veriMatrisi[l][j] = 0
                 else:
-                    A[l][j] += c * A[i][j]
+                    veriMatrisi[l][j] += c * veriMatrisi[i][j]
 
-    matris = [0 for i in range(boyut)]
-    for i in range(boyut - 1, -1, -1):
-        matris[i] = A[i][boyut] / A[i][i]
+    matris = [0 for i in range(uzunluk)]
+    for i in range(uzunluk - 1, -1, -1):
+        matris[i] = veriMatrisi[i][uzunluk] / veriMatrisi[i][i]
         for k in range(i - 1, -1, -1):
-            A[k][boyut] -= A[k][i] * matris[i]
+            veriMatrisi[k][uzunluk] -= veriMatrisi[k][i] * matris[i]
     return matris
-def veri():
-    hata = []
-    n = len(data)
-    for derece in range(1,7):
-        xToplamlari = []
-        if derece == 1:
-            for i in range(derece + 1):
-                xToplamlari.append([])
-                for j in range(i,i+2):
-                    xToplam = 0
-                    for k in range(len(list)):
-                        xToplam += list[k] ** j
-                    xToplamlari[i].append(xToplam)
 
-            xyToplamlari = []
-            for i in range(derece+1):
-                toplam = 0
-                for k in range(len(data)):
-                    toplam += data[k] * list[k] ** i
-                xyToplamlari.append(toplam)
+def matris_olustur(veriler , xBas):
+    kat_sayılar = []
+    if (xBas == 0):
+        temp = 1
+    elif(xBas == 1):
+        temp = 0
+    uzunluk = len(veriler)
+    for derece in range(1, 7):
+        matris = []
+        for k in range(derece + 1):  # satır işlemleri
+            satır = []
+            for j in range(derece + 1):  # sütun işlemleri
+                if (k == 0 and j == 0):
+                    satır.append(uzunluk)
+                else:
+                    satır.append(xToplam(1, (uzunluk - temp) , j + k))
 
-            k = 0
-            for b in xToplamlari:
-                b.append(xyToplamlari[k])
-                k = k + 1
+            satır.append(xy_toplam(veriler,k,xBas))
+            matris.append(satır)
 
-            katsayilar = gauss(xToplamlari)
+        kat_sayılar.append(matrisÇöz(matris))
+    return kat_sayılar
 
-            myResult = []
-            for i in range(len(list)):
-                toplam = 0
-                for j in range(len(katsayilar)):
-                    toplam += katsayilar[j] * ((i + 1) ** j)
-                    if j == derece:
-                        myResult.append(int(toplam))
-            f = faultFunc(myResult, 0, len(data))
-            hata.append(f)
-            yaz(katsayilar,derece,f)
-        else:
-            a = 0
-            for i in range(derece + 1):
-                temp = a
-                xToplamlari.append([])
-                for j in range(derece + 1):
-                    xToplam = 0
-                    for k in range(len(list)):
-                        xToplam += list[k] ** a
-                    a += 1
-                    xToplamlari[i].append(xToplam)
-                temp += derece - 1
-                a = 0
-                a += temp
-            xyToplamlari = []
-            for i in range(derece+1):
-                toplam = 0
-                for k in range(len(data)):
-                    toplam += data[k] * list[k] ** i
-                xyToplamlari.append(toplam)
-            k = 0
-            for b in xToplamlari:
-                b.append(xyToplamlari[k])
-                k = k + 1
+def hataOranı(katsayılar,veri_dizisi,xBas):
+    hata_oranları = []
 
-            katsayilar = gauss(xToplamlari)
+    for denklem in katsayılar:
+        hesaplar = []
+        for x_verisi in range(xBas,len(veri_dizisi)+xBas):
+            hesaplanan_veri = 0
+            for k in range(len(denklem)):
+                hesaplanan_veri = hesaplanan_veri +  denklem[k]*(x_verisi**k)
+            hesaplar.append(hesaplanan_veri)
 
-            myResult = []
-            for i in range(len(list)):
-                toplam = 0
-                for j in range(len(katsayilar)):
-                    toplam += katsayilar[j] * ((i+1) ** j)
-                    if (j == derece):
-                        myResult.append(int(toplam))
+        sr = 0
+        for index in range(len(veri_dizisi)):
+            sr = sr + ((veri_dizisi[index] - hesaplar[index])**2)
 
-            f = faultFunc(myResult,0,n)
+        a1 = len(veri_dizisi)
+        a2 = (len(denklem)-1)
+        payda = a1 - (a2+1)
+        if (payda == 0):
+            payda = -1
 
-            hata.append(f)
-            yaz(katsayilar,derece, f)
-    bestChoice = 100
-    index = 0
+        standart_tahmini_hata = (sr/payda)**(1/2)
+        hata_oranları.append(standart_tahmini_hata)
+    min_hata = hata_oranları[0]
+    for i in hata_oranları:
+        if (i < min_hata):
+            min_hata = i
 
-    for i in range(len(hata)):
-        temp = abs(1 - hata[i])
+    return min_hata , (hata_oranları.index(min_hata)+1), katsayılar[hata_oranları.index(min_hata)]
 
-        if temp < bestChoice:
-            bestChoice = temp
-            index = i + 1
+def fxPol(x):
+    katsayilar = bestPolyCoeff
+    hesaplanan = 0
+    for i in range(len(katsayilar)):
+        hesaplanan += katsayilar[i] * (x ** i)
+    return hesaplanan
 
-    dosya = open('sonuc.txt', 'a+')
-    dosya.write(
-        str(0) + '-' + str(n - 1) + ' aralığında en uygun polinom: ' + str(6) + '\n')
-    dosya.write('\n ---------------------------------------------- \n')
-    dosya.write('\n')
-    dosya.close()
 
-createListandData()
-veri()
+hata,oran,bestPolyCoeff = hataOranı(matris_olustur(dataList,1),dataList,1)
+dosya = open('180401038_yorum.txt', 'w')
 
+# Öğrenci numaram 180401038 a değeri = 8
+a = 8
+b = len(dataList)
+
+deltaX = 0.001
+integralSonuc = 0
+n = int((b - a) / deltaX)
+
+for i in range(n):
+    integralSonuc += deltaX * (fxPol(a) + fxPol(a + deltaX)) / 2
+    a += deltaX
+
+print("Polinom kullanarak çıkan integral sonucu : " + str(integralSonuc))
+dosya.write("Polinom kullanarak hesaplanan alan : " + str(integralSonuc))
+
+# Öğrenci numaram 180401038 a değeri = 8
+a = 8
+b = len(dataList)
+
+integralSonuc = 0
+for i in range(a - 1, b - 1):
+    integralSonuc += (dataList[i] + dataList[i + 1]) / 2
+
+print("Polinom kullanmadan çıkan integral sonucu : " + str(integralSonuc))
+
+dosya.write("\nPolinom kullanmadan hesaplanan alan : " + str(integralSonuc))
+dosya.write("""\nSonuçların farklı çıkma sebebi delta_x'e verdiğimiz değerden dolayıdır.
+delta_x ne kadar küçük olursa hesaplanan alan o kadar çok artar ve gerçeğe daha yakın olur.
+Grafik ile alan arasındaki boşluklar kapanır ve taşmalar azalır bu sebepten dolayı hata oranıda azalır.
+Polinomlu olan hesaplamada delta_x daha küçük olduğundan daha çok alan hesabı yapabiliyoruz. Bu da polinomsuza göre
+istenilen sonuca daha yakın bir cevap çıkarıyor.
+Polinomsuz olanda delta_x'i 1 alıyoruz bu da aslında sadece elimizdeki verileri kullandığımızı gösteriyor. Hata oranı daha fazla
+oluyor, taşmalar yaşanabiliyor. Sonuçların farklı çıkmasının nedenleri bunlardır.
+
+""")
