@@ -1,3 +1,4 @@
+#Oğulcan Demirbilek 180401061
 import numpy as np
 from math import sqrt
 with open('veriler.txt', 'r') as r: 
