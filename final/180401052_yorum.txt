@@ -1,0 +1,18 @@
+Furkan Yazgan 180401052
+Soru 4-)
+
+En dusuk hata oranina sahip olan polinom    : 6.Dereceden olarak bulunmustur.
+2.Soruda polinom kullanarak hesapladığım alan : 163071.3205707343
+3.Soruda polinom kullanmadan hesapladığım alan : 163511.5
+
+İki sonuç arasındaki farkın temel nedeni delta_x uzunluğu ve alanı hesaplarken parçalara bölme sayımızdır.
+delta_x'i ne kadar küçük alırsak o kadar parça sayımız artar ve parçalar ile grafik arasında boşluklar veya taşmalar
+azalacaktır ve hata oranımız düşecektir.
+Yani 3.Soruda polinom kullanmadığımız için delta_x'i minimum 1 alabiliyoruz.
+Çünkü örnek 82 adet verimiz olsun burada herhangi sıralı iki veri arasındaki verileri bilemediğimiz için
+parçalama işlemini bir veriden bir sonraki veriye olacak şekilde yaparız.Bu nedenle delta_x minimum 1 olur ve
+oluşturulan parçaların grafik ile arasındaki taşma veya boşluklar artar ve hata oranımız artar.
+Son olarak her iki çözümde de yamuk parçaları oluşturarak alan hesapladım, 
+yamuk metotunda parça ve grafik arasında taşmalar oluşabiliyor.
+Polinom kullanmadığım alan hesabında hata oranı daha fazla olduğu için taşmalar da artmış,
+bu nedenle polinom kullanmadan alan hesabının sonucu polinom kullandığım alan hesabının sonucundan fazla çıkmıştır.
