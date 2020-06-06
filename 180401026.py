@@ -1,7 +1,11 @@
 #Emre Beray BOZTEPE 180401026
 
+from sympy import Symbol
+
 file = open("veriler.txt", "r")
 datas = []
+
+x = Symbol('x')
 
 for i in file:#okunan dosyadaki değerleri bir diziye atandı
     datas.append(int(i))
@@ -30,11 +34,8 @@ def xiyitoplamlari(list, n):
         xiyidegerleri.append(xiyi)
     return xiyidegerleri
 
-"""print(kullanilacakxdegerleri(datas))
-print(xiyitoplamlari(datas))
-print(yitoplam)"""
-
-def gausselemeyontemi(degerler):
+#bu kısımda gönderilen matris çözümleniyor.
+def gausselemeyontemi(degerler, n):
     n = len(degerler)
 
     for i in range(0, n):
@@ -81,10 +82,10 @@ def cozumlerilistele(list, n):
                 degerlerlistesi[j].append(kullanilacakxdegerleri(list, n)[k + j])
             degerlerlistesi[j].append(xiyitoplamlari(list, n)[j])
             if j == i - 1:#son eleman da eklendikten sonra matris çözümlenip liste sıfırlanıyor. matris çözümüyle bulunan katsayılar cozum dizisine ekleniyor.
-                cozum.append(gausselemeyontemi(degerlerlistesi))
+                cozum.append(gausselemeyontemi(degerlerlistesi, n))
                 degerlerlistesi.clear()
     return cozum
-#print(cozumlerilistele())
+
 #bu kısımda st değerini formüle göre bulunuyor.
 def stdeger(x, datas, n, yitoplam):
     yort = yitoplam / n
@@ -126,52 +127,75 @@ def bireenyakindeger(korelasyondegerleri, datas, n, yitoplam):
             list.append((i+1, a[i]))
     return list
 
-#print(bireenyakindeger(cozumlerilistele()))
-#tüm veriler için önce bulunan katsayılar ve korelasyon sayıları yazdırılıyor, sonra en uygun polinom yazdırılıyor.
-def yazdirma():
-    filenew = open("sonuc.txt", "w+")
-    filenew.write("*******************TUM DEGERLER ICIN*******************" + "\n\n\n")
-    a = 0
+#bu fonkisyonda en uygun polinom çağrılır ve fonksiyon haline getirilir. Gelecek olan x değerine göre fonksiyonun çözümü döndürülür.
+def fx(x):
+    fonksiyon = 0
+    a = bireenyakindeger(cozumlerilistele(datas, n), datas, n, yitoplam)[0][0]
     for i in cozumlerilistele(datas, n):
-        filenew.write("\t\t"+ str(a+1) + ". derece"+ "\n")
-        b = 0
-        for k in i:
-            filenew.write(str(b+1) + ". deger = " + str(k)+"\n")
-            b += 1
-        filenew.write("Korelasyon = " + str(korelasyonlist(cozumlerilistele(datas, n), datas, n, yitoplam)[a])+"\n")
-        a += 1
-    filenew.write("\n\t***Tum degerler icin en uygun polinom ve korelasyon degeri = " + str(
-        bireenyakindeger(cozumlerilistele(datas, n), datas, n, yitoplam)[0]) + "***\n\n\n")
+        if len(i) == a + 1:
+            t = 0
+            for j in range(0, a+1):
+                fonksiyon += i[t]*(x**j)
+                t += 1
+    return fonksiyon
 
-#10arlı gruplar oluşturuluyor ve bu gruplar listelere atanıyor. daha sonra bu listelerdeki değerlere göre korelasyon değerleri bulunup yazdırılıyor.
-    #bu gruplar 1-10, 2-11, 3-12..., 37-46 olarak oluşturuldu
+#bu kısımda a = okul numaramın son rakamı, b = satır sayısı(toplam eleman sayısı) olarak alınır ve kendimizin belirleyeceği delta değerine göre
+    #bulunmuş olan en uygun polinomun integrali döndürülür.
+def integral1():
+    a = 180401026 % 10
+    b = len(datas)
+    deltax = 0.1
+    integral = 0
 
-    for j in range(len(datas)):
-        a = 0
-        newlist = []
-        if(j + 10 > len(datas)):
-            break
-        for l in range(j, j+10):
-            newlist.append(datas[l])
-        filenew.write("*******************" + str(j+1) + " ile " + str(j+10) + " arasindaki degerler icin*******************")
-        filenew.write("\n\t***Bu araliktaki degerler icin en uygun polinom ve korelasyon degeri = " + str(
-            bireenyakindeger(cozumlerilistele(newlist, len(newlist)), newlist, len(newlist), sum(newlist))[0]) + "***\n\n\n")
-#10arlı gruplar oluşturuluyor. 0-9, 10-19..., 30-39 olarak oluşturuldu!
-    bas = 1
-    bit = 10
-    a = 0
-    for j in range(len(datas)):
-        newlist = []
-        if ((bit*a)+10 > len(datas)):
-            break
-        for l in range((bas*a*10), bit*a + 9):
-            newlist.append(datas[l])
-        filenew.write(
-            "*******************" + str(bas*a*10) + " ile " + str(bit*a + 9) + " arasindaki degerler icin*******************")
-        filenew.write("\n\t***Bu araliktaki degerler icin en uygun polinom ve korelasyon degeri = " + str(
-            bireenyakindeger(cozumlerilistele(newlist, len(newlist)), newlist, len(newlist), sum(newlist))[0]) + "***\n\n\n")
-        a += 1
-    filenew.close()
+    n = int((b - a) / deltax)
+    denklem = fx(x)
+    for i in range(n):
+        integral += deltax * (denklem.subs({x:a}) + denklem.subs({x:a + deltax}) ) / 2
+        a += deltax
+
+    return integral
+
+#bu kısımda a = okul numaramın son rakamı, b = satır sayısı(toplam eleman sayısı) olarak alınır ve kendimizin belirleyeceği delta değerine göre
+    #veriler dosyasından okuğumuz değerlerin integrali döndürülür.
+def integral2():
+    a = 180401026 % 10
+    b = len(datas)
+    deltax = 1
+    integral = 0
+
+    n = int((b - a) / deltax)
+
+    for i in range(n-1):
+        integral += deltax * (datas[a] + datas[a + deltax]) / 2
+        a += deltax
+
+    return integral
+
+def yazdirma():
+    # en_uygun_polinom(datas, n, yitoplam)
+    print("--------------------------------------------------------------")
+    print("\n\n")
+    print("En Uygun Polinom =", bireenyakindeger(cozumlerilistele(datas, n), datas, n, yitoplam)[0][0],
+          ". Dereceden Polinomdur.")
+    print("\nBulunan denklem:")
+    print(fx(x))  # denklem haline getirilmiş fonksiyon yazılır.
+    print("\n\n")
+    print("--------------------------------------------------------------")
+    print("\n\n")
+    print("En uygun polinomun integrali = ", integral1())  # en uygun polinomun integrali yazılır
+    print("\n\n")
+    print("--------------------------------------------------------------")
+    print("\n\n")
+    print("Polinom olmadan bulunan integral = ", integral2())  # dosyadan okunan veriler kullanılarak bulunan integral yazılır
+    fnew = open("180401026_yorum.txt", 'w', encoding='UTF8')
+    fnew.write("Deltax(dikdörtgenin eni) değerini ne kadar küçültürsek bulacağımız değer o kadar gerçeğe yakın olur.\n")
+    fnew.write("Bunun nedeni: integrali, polinomu küçük dikdörtgenler haline getirip bu dikdörtgenlerin alanlarını toplayarak bulmamızdır.\n")
+    fnew.write("Yani, deltax ne kadar küçültülürse, işleme katılacak alan sayısı artar ve gerçeğe daha yakın değerler elde edilir.\n")
+    fnew.write("Ancak işlem daha uzun sürer.\n")
+    fnew.write("Polinomsuz hesapta bir polinomdan değil, elimizdeki verilerden yararlanıyoruz\n")
+    fnew.write("ve deltax'i minimum 1 alabildiğimiz için dikdörtgeni daha küçük parçalara bölemiyoruz.\n")
+    fnew.write("Bu sebepten dolayı hata payımız artıyor.\n")
+    fnew.write("Sonuç olarak, polinom ile bulduğumuz integral, polinomsuz bulduğumuza göre daha doğru bir sonuç verecektir.")
+    fnew.close()
+
 yazdirma()
-
-
