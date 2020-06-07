@@ -1,5 +1,0 @@
-------------------------------------------------------- 
-Buldugumuz polinomda gercek veriler bire bir ayni bulunmaz, ustune ustluk sayisal integral aliyoruz sayisal integralde de deltanin buyuk ya da 
-kucuk olmasina gore bir hata payi vardir. Polinomsuz verilerle aldigimiz integralde ise delta 1 dir. Polinomluda 0.1 aliyorum .
- Farkli cikmasinin sebebi budur.
- Delta ne kadar kucuk olursa gercek sonuca o kadar yaklasiriz.
