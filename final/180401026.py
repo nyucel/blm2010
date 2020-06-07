@@ -160,7 +160,7 @@ def integral1():
 def integral2():
     a = 180401026 % 10
     b = len(datas)
-    deltax = 0.5
+    deltax = 1
     integral = 0
 
     n = int((b - a) / deltax)
