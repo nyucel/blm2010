@@ -1,9 +1,5 @@
-#Cihan Kavuk
-#170401021
-
-
-
 import math
+import sympy as syp
 
 def oku():
     dosya = open("veriler.txt")
@@ -80,16 +76,13 @@ def korelasyon_ve_hata(x,y,n,katsayilar,m):
     r = math.sqrt(abs((St-Sr)/St)) #korelasyon
     return r,S_y_x
 
-def pol_yakinlastir(x,y,dosya):
+def enuygunhesapla(x,y,dosya):
     korel = []
     dosya.write('------------------------------------------------------- \n')
     for i in range(1,7):
         matris = matris_olustur(x,y,len(y),i)
         katsayılar = gausselimination(matris)
-        dosya.write(f'{i}. dereceden fonkisyonun katsayıları: {katsayılar} \n')
         korel.append(korelasyon_ve_hata(x,y,len(y),katsayılar,i))
-        dosya.write(f'Korelasyon katsayısı= {korel[i-1][0]} \n')
-        dosya.write(f'Standart tahmini hata= {korel[i-1][1]} \n')
     max,min,temp,w =korel[0][0],korel[0][1],0,0
     for i in range(len(korel)):
         if korel[i][0] > max:
@@ -98,45 +91,55 @@ def pol_yakinlastir(x,y,dosya):
             max = korel[i][0]
             if temp < min:
                 min = temp
-    dosya.write(f'en büyük korelasyon: {max}\nen küçük korelasyon: {min}\nen uygun {w+1}. polinom \n')
-    onlusirala(y,dosya)
+    print(f'en büyük korelasyon: {max}\nen küçük korelasyon: {min}\nen uygun {w+1}. polinom \n')
+    bestmatriskatsayi = gausselimination(matris_olustur(x,y,len(y),w+1))
+    integ = integral(bestmatriskatsayi,len(y))
+    sembolikdenk = sembolikdenklem(bestmatriskatsayi)
+    print(f'Denklem : {sembolikdenk} \n {w+1}. dereceden bir denklem \n')
+    print(f'Polinomlu Integralin Sonucu: {integ} \n')
+    polinomsuz = polinomsuzintegral(y)
+    print(f'Polinomsuz Integralin Sonucu : {polinomsuz} \n')
 
-def onlusirala(y,dosya):
-    liste=[]
-    liste2=[]
-    uzunluk = len(y)
-    uzunluk10 = int(uzunluk/10)
-    sonsayi,baslangic = 10,0
-    korel = []
-    z = 0
-    for x in range(uzunluk10):
-        for i in range(baslangic,sonsayi):
-            liste.append(y[i])
-        for i in range(len(liste)):
-            liste2.append(i)
-        for t in range(1,7):
-            katsayilar = gausselimination(matris_olustur(liste2,liste,len(liste),t))
-            korel.append(korelasyon_ve_hata(liste2,liste,len(liste),katsayilar,t))
-            max, min, temp, w = korel[0][0], korel[0][1], 0, 0
-            for i in range(len(korel)):
-                if korel[i][0] > max:
-                    temp = max
-                    w = i
-                    max = korel[i][0]
-                    if temp < min:
-                        min = temp
-        dosya.write(f'{z+1}. aralikta en uygun polinom : {w+1}. polinom \n')
-        w = 0
-        baslangic+=10
-        sonsayi+=10
-        korel.clear()
-        liste.clear()
-        liste2.clear()
-        z+=1
 
+def fonk (bestmatriskatsayi,x):
+    denklem = bestmatriskatsayi
+    asıldenk = x**6*denklem[6] + x**5*denklem[5]+x**4*denklem[4] +x**3*denklem[3] +x**2*denklem[2] + x*denklem[1] + denklem[0]
+    return asıldenk
+
+
+def integral(bestmatriskatsayi,satirsayisi):
+    baslangic = 1 # numaram 170401021
+    bitis = satirsayisi
+    deltax = 0.01
+    integral  =0
+    n = int((bitis-baslangic) / deltax)
+    for i in range(n):
+        integral += deltax* (fonk(bestmatriskatsayi,baslangic) + fonk(bestmatriskatsayi,baslangic+deltax)) / 2
+        baslangic = baslangic + deltax
+    return integral
+def sembolikdenklem(denklem):
+    x = syp.symbols('x')
+    sd = x**6 * denklem[6] + x**5 * denklem[5]+x**4 * denklem[4] +x**3 * denklem[3] +x**2 * denklem[2] + x * denklem[1] + denklem[0]
+    return sd
+
+def polinomsuzintegral(data):
+    a = 1
+    b = len(data)
+    deltax = 1
+    integral = 0
+    n = int((b-a)/deltax)
+    for i in range(n-1):
+        integral+= deltax * (data[a] + data[a+deltax])/2
+        a+=deltax
+    return integral
+def yorumyap(sonuc):
+    sonuc.write('Buldugumuz polinomda gercek veriler bire bir ayni bulunmaz, ustune ustluk sayisal integral aliyoruz sayisal integralde de deltanin buyuk ya da \n'
+                'kucuk olmasina gore bir hata payi vardir. Polinomsuz verilerle aldigimiz integralde ise delta 1 dir. Polinomluda 0.1 aliyorum .\n Farkli cikmasinin sebebi budur.\n '
+                'Delta ne kadar kucuk olursa gercek sonuca o kadar yaklasiriz.')
+    sonuc.close()
 
 
 x,y = oku()
-sonuc = open('sonuc.txt','w')
-pol_yakinlastir(x,y,sonuc)
-
+sonuc = open('170401021_yorum.txt','w')
+enuygunhesapla(x,y,sonuc)
+yorumyap(sonuc)
