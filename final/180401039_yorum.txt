@@ -1,0 +1,3 @@
+Bulduğumuz polinom, gerçek verileri bire bir aynı bulamadığı için sayısal integral alınırken veride bir hata payı olur.
+Polinom üzerinden sayısal integral alındığında da deltax sayısının büyüklüğüne göre bir hata payı olur.
+Bundan dolayı sonuçlar farklı çıkar.
