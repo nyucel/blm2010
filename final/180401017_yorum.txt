@@ -1,0 +1,4 @@
+Simay Hoşmeyve 180401017 
+Polinom yardımıyla hesaplama yaparken deltax aralığımızı daha küçük alabiliyoruz.Böylece alan hesaplamak için dikdörtgen veya yamuk yöntemi ile oluşturduğumuz alandaha detaylı hesaplama yapabiliyor taşmalar veya eksilmeler daha az oluyor. 
+Polinomsuz hesaplarken ise bu aralıkları en küçük 1'den yani bir x verisinden bir sonrakine kadaralabiliyoruz.Polinomsuz hesaplamada sonuçlarımız gerçek sonuca daha uzak çıkıyor.
+Bu nedenlerden sonuçlar arasında fark buluyoruz.
