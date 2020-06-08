@@ -1,0 +1,5 @@
+Ercan Berber 180401077 
+
+1. Polinom ile buldugumuz degerin hata payi daya dusuktur. Cünkü hesaplarken deltax degeri ile hesapladigimiz dikdörtgen sayisini arttiririz. 
+2. Gercek degerleri hesaplarken deltaxi 1 aliriz. Bundan dolayi dikdörtgen sayimiz azalir ve integralin hata payi artar. 
+3. Polinom ile buldugumuz degerler ile gercek degerler arasindaki fark.
