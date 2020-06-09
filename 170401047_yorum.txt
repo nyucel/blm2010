@@ -1,6 +1,0 @@
-Ömer Çiçek 170401047 
-Verileri, 6. dereceden polinoma 0.9626337181923464 korelasyon deðeri ile uyarladýðýmýzda çok yakýn deðerler bulabiliyoruz.
- Elde ettiðimiz bu polinomu yamuk yöntemiyle deltax deðerini ne kadar küçültürsek o kadar yakýn deðerde belirtilen aralýkta integral alabiliriz.
-Polinom kullanmadan gerçek veriler üzerinden yaptýðýmýzda arada az bir fark oluþuyor.
-Bunun en büyük sebebi polinomlu yöntemde çizilen polinomun daha lineer artýþlara veya azalýþlara sahip olmasýdýr.
-Bu sayede hesaba katýlmayan alan parçalarý az oluyor.Fazla etki etmesede diðer bir sebebi ise delta x in 1 olma zorunluluðudur.
