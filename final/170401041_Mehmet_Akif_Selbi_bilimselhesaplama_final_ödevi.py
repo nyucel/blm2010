@@ -124,12 +124,12 @@ def polinomsuz_integral(y):
 def yorum():
     dosya = open("170401041_yorum.txt","w")
     dosya.write("Hesapladigimiz 2 integralin farkli cikmasinin nedeni\n")
-    dosya.write("İntegral hesabi yaparken verilen polinomu kucuk diktorgenlere bolup ,alanlarini hesaplayip ,toplariz\n")
-    dosya.write("Aldıgımız dikdortgenlerin ne kadar kucuk olursa o kadar fazla dikdortgen alani hesaplar ve integrale yakin deger elde ederiz\n")
+    dosya.write("integral hesabi yaparken verilen polinomu kucuk diktorgenlere bolup ,alanlarini hesaplayip ,toplariz\n")
+    dosya.write("Aldigimiz dikdortgenlerin ne kadar kucuk olursa o kadar fazla dikdortgen alani hesaplar ve integrale yakin deger elde ederiz\n")
     dosya.write("Biz bu olayi bu fonksiyonlarda deltax ile yapiyoruz\n")
     dosya.write("Polinomluda deltax i kucuk secebiliyoruz\n")
     dosya.write("Polinomsuzda deltax 1 oldugu icin belli sayida yaklasabiliyoruz\n")
-    dosya.write("Bu yüzden polinomlu da hassas bir sekilde integrali hesaplayabiliyorken polinomsuz da bunu yapamiyoruz\n")
+    dosya.write("Bu yuzden polinomlu da hassas bir sekilde integrali hesaplayabiliyorken polinomsuz da bunu yapamiyoruz\n")
     dosya.close()
 
 
