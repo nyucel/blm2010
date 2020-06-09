@@ -1,0 +1,11 @@
+ad - soyad : Ramazan AYDIN 
+NUMARA     : 180401040 
+ Hesaplamalarımda yamuk metodunu kullandım.
+ Hesapladigimiz 2 integral değeri de öngördüğümüz gibi birbirinden farkli çikmistir. 
+ Bunun nedeni ; 
+İntegral Hesabi yapılırken , verilen polinomu küçük dikdörtgenlere bölerek ve bunların alanlarını toplayarak hesaplamaya çalışırız. 
+ Deltax(dikdörtgenin eni) değerini ne kadar küçültürsek ,işleme katılacak alan sayısı artar ve  bulacağımız değer o kadar gerçeğe yakın olur.
+ Ancak bu iki integral arasındaki farkın temel sebebi , birinci integrali  polinom haline getirirken 
+ belirli bir korelasyon sayısına göre polinoma yaklaştırmamızdandır.
+ Bu sebepten, deltax değerlerini eşit aldığımızda bile sonuç farklı  olur. 
+ 
