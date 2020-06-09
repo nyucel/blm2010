@@ -1,0 +1,8 @@
+Özgür KÜÇET 170401050 
+Her 2 yöntemdede sayısal yöntemler kullanarak hesapladığımız için gerçek doğru sonuca ulaşamadık aslında. 
+Polinom gerçek polinoma yakın bir polinom gerçek denklemi değil o yüzden aldığımız kolerasyon sayısının 
+1 e uzaklığı artıkça daha kötü sonuç vericektir.Direk verileri kullanarak yaptığımızda ise kullandığımız 
+yönteme göre daha iyi bir sonuç vermesini sağlayabiliriz. Verilerde h'ı 1 almak zorunda olduğumuz için 
+yöntemin kendisini iyi almamız gerekiyor euler yöntemi gibi yöntemler bunu yaparken iyi sonuç vermiyor. 
+Polinomun r değeri 0.99994 olan veriler ile yaptığımda veriler yöntemi ve polinom yöntemi
+arasındaki fark çok az oldu bunun nedeni polinomu iyi olmasıydı.
