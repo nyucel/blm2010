@@ -3,60 +3,6 @@ x=open('veriler.txt','r')
 veriler=[0]
 for i in x:
     veriler.append(int(i))
-
-def main():
-    f = open('sonuc.txt', "w")
-    f.write("----------------1. dereceden polinom katsayilari-------------")
-    f.write('\n')
-    r_list=[0]
-    for i in range(1,7):
-        f = open('sonuc.txt', "a")
-        if(i<6):
-            f.write("-------------------" + str(i + 1) + "." + "dereceden polinom katsayilari----------------------")
-        f.write('\n')
-        cozumlu_matris=denklem_olusturma(i,veriler)
-        katsayi_listesi=katsayi_bulma(cozumlu_matris,i)
-        yazdirma(katsayi_listesi)
-        r_list=hata_bulma(veriler, katsayi_listesi, i,r_list)
-    uygun_polinom(r_list)
-
-
-def yazdirma(list):     #Katsayı değerlerini yazdırır...
-    f = open('sonuc.txt', "a")
-    for i in range(len(list)):
-        string=str(list[i])
-        f.write("a" + str(i) + "=")
-        f.write(string)
-        f.write('\n')
-    f.write('\n')
-
-def uygun_polinom(list):    #Korelasyon değerine göre uygun polinomu önerir...
-    f = open('sonuc.txt', "a")
-    for i in range(1,len(list)):
-        string=str(list[i])
-        f.write(str(i) + ". dereceden polinom korelasyon degeri=")
-        f.write(string)
-        f.write('\n')
-    f.write('\n')
-    f.write("6.derece polinomdan yaklasmak bize en yakin sonuclari verir.Korelasyon degeri--> " + str(list[6]))
-    f.write('\n')
-
-
-def uygun_polinom_2(list,veriler,b):   #10 lu veri grupları için korelasyon değerine göre uygun polinomu önerir...
-    f = open('sonuc.txt', "a")
-    f.write('\n')
-    f.write('----------------------------' + str(1 + b) + "-" + str(10 + b) + ' indeks arasi korelasyon degerleri---------------------- ')
-    f.write('\n')
-    for i in range(1,len(list)):
-        string=str(list[i])
-        f.write(str(i) + ". dereceden polinom korelasyon degeri=")
-        f.write(string)
-        f.write('\n')
-    f.write('\n')
-    f.write("6.derece polinomdan yaklasmak bize en yakin sonuclari verir.Korelasyon degeri--> " + str(list[6]))
-    f.write('\n')
-
-
 def denklem_olusturma(derece,veriler):  #1,2,3,4,5 ve 6. derece için denklemler oluşturur...
     matris=[]
     if(derece==1):
@@ -139,6 +85,7 @@ def denklem_olusturma(derece,veriler):  #1,2,3,4,5 ve 6. derece için denklemler
             matris.append([a, b, c, d, e, f, g, h])
         cozumlu_matris=matris_coz(matris)
         return cozumlu_matris
+
 def matris_coz(matris): #Alt üçgen yöntemiyle verilen matrisi çözer...
     boyut=len(matris)
     for n in range(boyut):
@@ -214,52 +161,49 @@ def katsayi_bulma(matris,derece):   #Çözülen matrisdeki katsayıları bulur..
         katsayi_liste.append(a_5)
         katsayi_liste.append(a_6)
     return katsayi_liste
-def hata_bulma(veriler,katsayilar,derece,r_list):   #Korelasyon değerini hesaplar....
-    hata,y,S_t=0,0,0
-    boy=len(veriler)-1
-    for j in range(1,len(veriler)):
-       y=y+ veriler[j]
-    y_= y/boy
-    for i in range(1,len(veriler)):
-        S_t= S_t + (veriler[i] -y_)**2
-    if(derece==1):
-        for i in range(1,len(veriler)):
-          hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i)))**2
-    if(derece==2):
-        for i in range(1,len(veriler)):
-            hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i + katsayilar[2] *i**2 )))**2
-    if(derece==3):
-        for i in range(1,len(veriler)):
-            hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i + katsayilar[2] *i**2 + katsayilar[3]* i**3)))**2
-    if(derece==4):
-        for i in range(1,len(veriler)):
-            hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i + katsayilar[2] *i**2 + katsayilar[3]* i**3 + katsayilar[4]*i**4)))**2
-    if(derece==5):
-        for i in range(1,len(veriler)):
-            hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i + katsayilar[2] *i**2 + katsayilar[3]* i**3 + katsayilar[4]*i**4 + katsayilar[5]*i**5)))**2
-    if(derece==6):
-        for i in range(1,len(veriler)):
-            hata= hata + (veriler[i] - int((katsayilar[0] + katsayilar[1] * i + katsayilar[2] *i**2 + katsayilar[3]* i**3 + katsayilar[4]*i**4 + katsayilar[5]*i**5 + katsayilar[6]*i**6)))**2
-    r = ((S_t - hata) / S_t) ** (1 / 2)
-    r_list.append(r)
-    return r_list
 
-def onlu_gruplar(list): #10 lu gruplar için denklemleri oluşturup katsayıları buldurur...
-    b=0
-    f = open('sonuc.txt', "a")
-    while(b<int(len(list)/10)*10):
-        listem = [0]
-        r_listem_2=[0]
-        for i in range(1+b,11+b):
-            listem.append(list[i])
-        for j in range(1,7):
-            x = []
-            cozumlu_matris=denklem_olusturma(j,listem)
-            katsayi_liste=katsayi_bulma(cozumlu_matris,j)
-            x=hata_bulma(listem,katsayi_liste,j,x)
-            r_listem_2.append(x[0])
-        uygun_polinom_2(r_listem_2,listem,b)
-        b=b+10
+def main():
+    r_list=[0]
+    for i in range(1,7):
+        cozumlu_matris=denklem_olusturma(i,veriler)
+        katsayi_listesi=katsayi_bulma(cozumlu_matris,i)
+    return katsayi_listesi
+    uygun_polinom(r_list)
 
-main()      # main i çağırarak tüm veriler için katsayılar çıkar...
-onlu_gruplar(veriler)   #Onlu grupları değerlendirmek için çağırırız...
+def f(x,listem):
+    #print(listem)
+    return((listem[0] + listem[1] * x + listem[2] *x**2 + listem[3]* x**3 + listem[4]*x**4 + listem[5]*x**5 + listem[6]*x**6))
+
+def polinomlu(veriler):
+    listem=[]
+    listem=main()
+    a = 7
+    b = len(veriler)-1
+    deltax = 1
+    integral = 0
+    n = int((b-a)/deltax)
+    for i in range(n):
+        integral += deltax*(f(a,listem)+f(a+deltax,listem))/2
+        a += deltax
+    return(integral)
+
+def polinomsuz(veriler):
+    a = 7
+    b = len(veriler)-1
+    deltax = 1
+    integral = 0
+    n = int((b-a)/deltax)
+    for i in range(n):
+        integral += deltax*(veriler[a]+veriler[a+deltax])/2
+        a += deltax
+    return (integral)
+
+print("Polinom kullanılarak integral değeri:",polinomlu(veriler))
+print("Polinom kullanmadan integral değeri:" ,polinomsuz(veriler))
+f=open("170401047_yorum.txt",'w')
+f.write("Ömer Çiçek 170401047 \n")
+f.write("Verileri, 6. dereceden polinoma 0.9626337181923464 korelasyon değeri ile uyarladığımızda çok yakın değerler bulabiliyoruz.\n ")
+f.write("Elde ettiğimiz bu polinomu yamuk yöntemiyle deltax değerini ne kadar küçültürsek o kadar yakın değerde belirtilen aralıkta integral alabiliriz.\n")
+f.write("Polinom kullanmadan gerçek veriler üzerinden yaptığımızda arada az bir fark oluşuyor.\n")
+f.write("Bunun en büyük sebebi polinomlu yöntemde çizilen polinomun daha lineer artışlara veya azalışlara sahip olmasıdır.\n")
+f.write("Bu sayede hesaba katılmayan alan parçaları az oluyor.Fazla etki etmesede diğer bir sebebi ise delta x in 1 olma zorunluluğudur.\n")
