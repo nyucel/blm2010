@@ -1,0 +1,7 @@
+Hesapladigimiz 2 integralin farkli cikmasinin nedeni
+integral hesabi yaparken verilen polinomu kucuk diktorgenlere bolup ,alanlarini hesaplayip ,toplariz
+Aldigimiz dikdortgenlerin ne kadar kucuk olursa o kadar fazla dikdortgen alani hesaplar ve integrale yakin deger elde ederiz
+Biz bu olayi bu fonksiyonlarda deltax ile yapiyoruz
+Polinomluda deltax i kucuk secebiliyoruz
+Polinomsuzda deltax 1 oldugu icin belli sayida yaklasabiliyoruz
+Bu yuzden polinomlu da hassas bir sekilde integrali hesaplayabiliyorken polinomsuz da bunu yapamiyoruz
