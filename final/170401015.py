@@ -172,7 +172,7 @@ def woPol():
     print("polinomsuz integral sonucu: ", integral)
 
 
-with open("170401015_yorum.txt","w") as f:
+with open("170401015_yorum.txt","w", encoding="utf-8") as f:
     f.write("can kurttekin 170401015\n")
     f.write("Polinomlu ve polinomsuz integral hesaplamalarında farklı sonuçlar çıkmasının nedeni\n")
     f.write("Polinomlu hesapta %100 uygun değerlerle işlem yapmıyoruz. Eğer hata 0 olsaydı ve 2 integral hesabında da delta x'i 1 alsaydık aynı sonucu alırdık.\n")
