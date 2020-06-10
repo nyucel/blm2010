@@ -1,0 +1,8 @@
+Taha Emre UGUR 170401059 
+Verileri polinoma uydurarak kullandigim, delta x = 0.001 olan yamuk yontemi kullanilan sonuc ile 
+direk verileri kullandigim, h=1 olan heun yontemi ile yapilan sonucun arasinda bu kadar farkin olma sebebi 
+egriye uydurulan polinomun verinin gercek polinomu olmadigi icin. Cunku odev harici yaptigim denemelerde 
+polinomla yaptigim integral de ara degerleri almadan yani delta x = 1 yaparak yaptigim sonuc ayni direk verilerden
+aldigim integral gibi sonuc cikarmasi gerekirken yine cok farkli bir sonuc cikiyor. Bundan dolayi bu 
+aralarindaki farkin sebebi polinomdan cikan veriler ile gercek verilerin farkli olmasindan kaynaklidir.
+verinin gercek polinomu olsaydi (korelasyon katsayisi = 1) boyle fark olmayacakti.

@@ -1,0 +1,1 @@
+Polinom ile yapılan integral hesabının polinomsuz integral hesaba göre daha çok alan, deklemin dereceleri üzerinde hesap yapmaktadır.Bu sebeblede polinom ile yapılan integral hesabı gerçek sonuca daha çok yakın bir sonuç çıkarır.2 sonucun farklı olmasının sebebi bundan kaynaklanmaktadır.

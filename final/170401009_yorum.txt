@@ -1,0 +1,17 @@
+6. dereceden polinom en uygun polinomdur.
+Polinom kullanılarak alınan integral değeri: 164684.51375343173
+Polinom kullanılmadan alınan integral değeri: 163247.5
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+3. ve 4. adımlarda bulunan sonuçlar arasındaki farkın nedeni
+
+  Polinomla yapılan hesapta tamamen uygun değerlerle değil,yakınsama yapılarak elde
+edilen değerler ile işlem yapıyoruz.Bazı değerler gerçek değerlerden daha yüksek iken 
+bazı değerler alçak.Bu da sonuçta farklılık ortaya çıkartıyor.Hesapladığımız polinom
+gerçekteki hastalık fonksiyonunu tam olarak örtmüyor.
+  Eğer hata miktarımız 0 olsaydı ve 2 integrali de deltax=1 olarak alsaydık aynı sonuç
+elde edilebilirdi.
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
