@@ -1,0 +1,12 @@
+***********Gökçe Nur Sarıcı*********** 170401032 
+
+
+Polinomlu ve Polinomsuz İntegralin farklı çıkmasının nedenleri: 
+
+integrali hesaplarken eğrinin altında kalan alanı küçük diktorgenlere ayırıp alanlarının hesaplarını toplarız. 
+Dikdörtgen sayısı küçüldükçe gerçek değere daha çok yaklaşmış oluruz.
+Böldüğümüz dikdörtgenlerin eni deltax'tir.Dikdörtgenlerin eni küçüldükçe dikdörtgen sayısı artacak doğru orantılı olarak hassasiyette artacaktır.
+Polinomlu da deltax değeri ile oynayabiliyoruz fakat polinomsuzda deltax'i 1 olarak alıyoruz.
+Yani istediğimiz kadar dikdörtgene bölemiyoruz.
+Bu sebepten Polinomlu ile Polinomsuz İntegralın sonuçları farklı değerlerdir.
+Bu bilgiler doğrultusunda POLİNOM İNTEGRALİnin sonucu beklenen sonuca daha yakın olur.
