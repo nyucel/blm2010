@@ -1,0 +1,15 @@
+-----------------------------------------------------
+6. Dereceden Polinomun 3 ve 82 Aralýðýnda Belirli Olan Ýntegrali :162989.724815208
+veriler.txt Dosyasýnda Bulunan Verilerin 3 ve 82 Aralýðýnda Belirli Olan Ýntegrali : 163507.0
+-----------------------------------------------------
+Ýntegral kýsaca belli bir aralýktaki toplam deðiþimi, ya da biriken deðiþim miktarýný ifade etmek için kullanýlýr
+Bu uygulamada 2 farklý iþlem ile verilerin integralleri alýnmýþtýr. Birinci iþlem verilerin, 1. dereceden
+6. dereceye kadar olan polinomlara yaklaþtýrýlýp kolerasyon deðeri en fazla olan polinomun integrali alýnmýþtýr.
+Bu iþlem yapýlýrken polinom dikdörtgenlere bölünmüþtür. Bu bölünen dikdörtgenlerin alan toplamý integralin
+Alanýný bize vermektedir. Ne kadar az geniþliðe sahip dikdörtgenler seçersek doðru sonuca o kadar fazla yaklaþmýþ
+olunmaktadýr. Burada Ne kadar az geniþlik denilen kýsým DeltaX ile ifade edilen kýsýmdýr. DeltaX ne kadar 0'a yakýn
+seçilirse sonuç o kadar hassas olur, hesaba katýlan dikdörtgenler o kadar fazla olur,taþmalar ve eksiklikler o kadar az olur.
+Ancak polinomlar yerine veriler kullanýlarak hesaplama yapýldýðýnda DeltaX olarak verebileceðimiz deðer en az 1 olmaktadýr
+Yani hesaplamayý yaparken bir veriden, bir sonraki veriye hesaplama yapabilmekteyiz.Bu sebeple oluþturulan parçalarýn
+taþma veya boþluklar olarak adlandýrdýðýmýz doðru sonuçtan uzaklaþmalar daha çok yaþanmaktadýr. Bu sebeplerden dolayý
+iki iþlem arasýnda farklýlýklar oluþmaktadýr.
