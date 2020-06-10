@@ -1,0 +1,7 @@
+    İşlenen verilerin en düşük hata ile uyduğu polinomu ve verileri kullanarak yaptığımız integral hesaplarının birbirinden farklı çıkmasının nedeni: 
+    Yamuk yöntemi(küçük dikdörtgenler ve büyük dikdörtgenlerin ortasındaki değere göre) kullanılarak integral hesabı yapılırken deltax(dikdörtgenin eni) 
+    değerini ne kadar küçültürsek küçültelim eğrinin altındaki alanı hiçbir zaman tam olarak bulamayız ama gerçeğe daha yakın bir değer bulmuş oluruz.
+    Fakat iki integral arasındaki farkın sebebi deltax değerlerini farklı almamız değil çünkü deltax değerlerini aynı verdiğimde de integral sonucu farklı çıkıyor.
+    Dolayısıyla bu farkın asıl sebebi polinoma yaklaştırarak elde edilen değerlerle oluşturulan fonksiyonun integrali alınırken 
+    polinomu belirli bir korelasyon değerine göre yakınsatmış olmamızdır.Yani polinom fonksiyonunu kullanarak aldığımız integral daha az hata payı ile değer döndürür.
+    
