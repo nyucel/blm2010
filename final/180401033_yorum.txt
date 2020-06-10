@@ -1,0 +1,5 @@
+Polinomlu ve polinomsuz hesapladığımız integraller sonuçları birbirinden farklı ama birbirine çok yakındır .
+İntegral ile işlem yaparken polinomu dikdörtgenlere ayırıp alanlarını hesapladıktan sonra toplarız.
+Bu dikdörtgenlerin enlerini ne kadar küçük değer verirsek ters orantılı olarak o kadar dikdörtgen elde ederiz.
+Yani integrale en yakın değeri elde ederiz.Bizde bunu deltax ile belirliyoruz.Polinomluda deltaximizi biz seçiyorken polinomsuzda 1dir
+Bu yüzden kendi belirlediğimiz değerlerle daha hassas bir yaklaşım elde ederiz. 
