@@ -1,4 +1,6 @@
-2. maddede bulunan alan bize verilen verilere en iyi uyum gösteren yani RMSE'u en düşük olan polinomun a ile b noktaları arasındaki alanıdır.
+Süleyman Baltacı 130401064
+
+1. maddede bulunan alan bize verilen verilere en iyi uyum gösteren yani RMSE'u en düşük olan polinomun a ile b noktaları arasındaki alanıdır.
 2. maddede bu veriler ışığında 1. 2. 3. 4. 5. ve 6. dereceden fonksiyonlar arasında en düşük RMSE'ye sahip olan polinom 6.dereceden polinom olmuştur.
 Bu polinomun altındaki alan bu polinomun integrali alınıp sınır değerleri verilerek bulunmuştur.
 
