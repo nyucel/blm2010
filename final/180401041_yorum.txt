@@ -1,0 +1,7 @@
+Ad Soyad: Emre Ekinci No:180401041 
+
+Polinomsuz hesaplamada integral üzerinde alabildiğimiz alanlar sınırlıdır , polinomlu hesaplamada ise daha esnek hareket edebiliriz. 
+İntegral hesabı yaparken polinomlu hesapta denklem bilindiğinden istediğimiz kadar küçük değerlerle işlem yapabiliyoruz.
+Bu iki yöntemin sonuçlarının farklı çıkma nedeni budur. Bunu daha iyi anlamak için integral yönteminde deltax değeri, polinomlu 
+ve polinomsuz hesaplamada aynı değer verilse bile sonuçlar arasında farklar oluşuyor. Bu eğrilere uydurulan 1 den 6. dereceye kadar 
+olan polinomlar arasındanen uygun polinom seçilmiş olmasına rağmen sonuçları aynı değildir ve yaklaaşma uzaklaşma durumlarını da vereceğimiz değerler belirlemektedir.
