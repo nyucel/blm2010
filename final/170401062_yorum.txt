@@ -1,0 +1,4 @@
+170401062 Yiğit
+Polinomlu ve polinomsuz olarak hesapladığımız integralin farklı sonuç döndürmesinin nedenideltax için belirlediğimiz değerin uzunluğundan kaynaklanmaktadır.
+Deltax değerini ne kadar küçük değer alırsak hesaplanması. Gereken alan sayısı artacaktır. 
+Bundan dolayı hata azalacaktır ve hesapladığımız değer gerçek değerini çok yaklaşacaktır.
