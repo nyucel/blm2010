@@ -1,0 +1,13 @@
+İntegral sonuclarinin farkli çikmasinin nedeni: 
+ 
+İntegral hesaplanirken verilen polinom yamuklara bolunur ve bunlarin alanlarini toplayarak hesaplariz.
+
+Yamukların eni ne kadar kucuk olursa o kadar ayrintili hesaplama yapilmis olur boylece istedigimiz degere daha yakin bir sonuc elde ederiz. 
+
+deltax degeri bize bu yamugun enini verir. Polinomlu integralde bu deltax degerini istedigimiz kadar kuculterek yani daha ayrintili hesaplama 
+
+yaparak polinomsuz integrale gore daha iyi sonuclar elde ederiz. Cunku polinomsuz integralde verilen veriler uzerinden deltax 1 olacak şekilde 
+
+hesaplama yaparız. Yani yamugun enini 1 alarak çok daha yuzeysel hesaplama yapariz 
+
+Ozetle polinomlu integral sonucu deltax i daha kucuk tutabilecegimizden polinomsuza gore daha iyi sonuclar verecektir.

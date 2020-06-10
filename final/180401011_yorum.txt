@@ -1,0 +1,5 @@
+Batuhan Okur / 180401011 
+ Integral hesaplarken hesapladığımız polinomu dikdörtgenlere böler ve bu dikdörtgenlerin alanlarını hesaplayıp toplarız.
+Bu dikdörtgenlerin eni ne kadar küçük olursa sonuç o kadar gerçeğe yakın olur. 
+Fakat bu hesaplanan iki fonksiyonda da dikdörtgenin eni(deltax) eşit alındı ve farklı sonuç çıktı. 
+Bunun sebebi bulduğumuz 6. dereceden polinomun orjinal polinoma belirli bir hata oranı olacak şekilde yakın olmasıdır.Eğer orjinal polinomu elde etmiş olsaydık(korelasyon katsayısı 1 olsaydı) sonuçlar aynı çıkacaktı.
