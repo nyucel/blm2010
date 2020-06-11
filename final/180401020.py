@@ -133,7 +133,6 @@ integratingCases(a,b,cases)
 
 with open("180401020_yorum.txt", "w" , encoding="utf-8") as file:
     file.write("    İşlenen verilerin en düşük hata ile uyduğu polinomu ve verileri kullanarak yaptığımız integral hesaplarının birbirinden farklı çıkmasının nedeni: ")
-    file.write
     file.write("""
     Yamuk yöntemi(küçük dikdörtgenler ve büyük dikdörtgenlerin ortasındaki değere göre) kullanılarak integral hesabı yapılırken deltax(dikdörtgenin eni) 
     değerini ne kadar küçültürsek küçültelim eğrinin altındaki alanı hiçbir zaman tam olarak bulamayız ama gerçeğe daha yakın bir değer bulmuş oluruz.
