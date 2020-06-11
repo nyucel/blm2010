@@ -1,0 +1,7 @@
+
+ HALÝL HÝLMÝ NAMLI 180401053 
+Ýki yöntemde tam olarak ayný sonucu vermeyecektir.
+Yamuk yönteminde ne kadar küçük deltaX alýrsak o kadar gerçeðe yakýn deðer alabiliriz
+Fakat biz 2 deðeri kýyaslamak için ayný yani deltaX'i 1 alýyoruz.
+Kullandýðýmýz polinom ise  orjinal polinom olmayýp yakýn bir polinomdur 
+ ve Bu polinomda korelasyon kullandýðýmýz için 1 e ne kadar yakýn olursa o kadar iyi sonuç verir.
