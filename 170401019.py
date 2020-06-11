@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat May 16 03:21:46 2020
+Created on Thu Jun 6 01:20:25 2020
 
 @author: LEGION
 """
-
 
 #Cengiz Ermis - 170401019 
 
@@ -14,7 +13,6 @@ with open("veriler.txt", "r", encoding='utf-8') as file:
         array.append(int(i))
 uz = len(array)
 yToplam = sum(array)
-
 
 
 def xitoplam(uz):
@@ -28,8 +26,6 @@ def xitoplam(uz):
         xKareToplam.append(value)
     return xKareToplam
 
-
-
 def xiyiToplam(uz,array):
 
     xi_yi_toplam = []
@@ -40,7 +36,6 @@ def xiyiToplam(uz,array):
             value = value + ((j + 1) ** i * array[j])
         xi_yi_toplam.append(value)
     return xi_yi_toplam
-
 
 #Elementer satır islemleri icin gerekli fonksiyon.
 
@@ -72,7 +67,6 @@ def gaussElimination(mx):
             mx[t][s] = mx[t][s] - (mx[t][i] * result[i])
     return result
 
-
 #Matrisi olusturma.
 
 def createMx(uz ,array ,m):
@@ -87,6 +81,7 @@ def createMx(uz ,array ,m):
         row += 1
         mx.append(eklenecekSatir)
     return mx
+
 
 #Matrisi cagırma ve ekleme yapma.
 
@@ -119,22 +114,55 @@ def calculateCorrelation(x ,array ,n):
     return result
 
 
-
 array = []
 for i in range(0,6):
-    x = calculateCorrelation(matrix[i],array,uz)
+    x = calculateCorrelation(mx[i],array,uz)
     array.append(x)
 lastArray = sorted(array)
 
 
-with open("sonuc.txt","a",encoding='utf-8') as file:
+def bestCorrelation(correlation):
+    supreme = max(correlation)
     counter = 1
-    for j in matrix:
-        x = len(j)
-        file.write(str(counter)+".Derece"+'\n')
-        for y in range(x):
-            file.write(str(j[y])+'\n')
-        file.write("myCorrelation:"+str(lastArray[counter-1])+'\n')
-        counter += 1
-        file.write('\n')
-    file.write(" The best correlation value for all data: " +str(lastArray[-1])+'\n')
+    while(supreme!=correlation[counter - 1]):
+        counter = counter + 1
+    return counter
+
+pol = mx[bestCorrelation(array) - 1]
+def f(x,pol):
+    return(pol[0] + pol[1]*x + pol[2]*x**2 + pol[3]*x**3 + pol[4]*x**4 + pol[5]*x**5 + pol[6]*x**6)
+
+
+def polinomluIntegral(array):
+
+    a=9
+    b=len(array)
+    deltax = 0.1
+    integral = 0
+    n = int((b - a)/deltax)
+    for i in range(n):
+        integral = deltax * (f(a) + f(a+deltax)) / 2+integral
+        a = a + deltax
+    return integral
+
+def polinomsuzIntegral(array):
+    a = 9
+    b = len(array)
+    deltax = 1
+    integral = 0
+    n = int((b - a) / deltax)
+    for i in range(n-1):
+        integral += deltax * (array[a] + array[a + deltax]) / 2
+        a = a + deltax
+    return integral
+print("Polinomlu integral : ",polinomluIntegral(array))
+print("Polinomsuz integral : ",polinomsuzIntegral(array))
+
+
+with open("170401019_yorum.txt","w",encoding='utf-8') as file:
+    file.write("Cengiz Ermis 170401019 \n")
+    file.write("İntegral sonuçlarının farklı çıkma sebebi deltax'e verilen değerden kaynaklanır.\n" )
+    file.write("Eğer deltax'i küçültürsek hesaplanan alan artacaktır bu sebeple hesaplanan değer gerçeğe daha yakınlaşmış olur.\n")
+    file.write("Bu yüzden polinomlu integral gerçeğe daha yakın bir sonuç verir. \n")
+    file.write("Polinomsuz hesaplamada istediğimiz kadar parçaya bölemediğimiz için  hata oranı daha fazladır.\n")
+
