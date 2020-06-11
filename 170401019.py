@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 6 01:20:25 2020
+Created on Thu Jun 6 01:48:41 2020
 
 @author: LEGION
 """
@@ -165,4 +165,3 @@ with open("170401019_yorum.txt","w",encoding='utf-8') as file:
     file.write("Eğer deltax'i küçültürsek hesaplanan alan artacaktır bu sebeple hesaplanan değer gerçeğe daha yakınlaşmış olur.\n")
     file.write("Bu yüzden polinomlu integral gerçeğe daha yakın bir sonuç verir. \n")
     file.write("Polinomsuz hesaplamada istediğimiz kadar parçaya bölemediğimiz için  hata oranı daha fazladır.\n")
-
