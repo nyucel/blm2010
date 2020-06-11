@@ -1,0 +1,11 @@
+Ahmet Osman Sezgin
+
+2. ve 3. sorularda bulunan sonuclarin farkli olma nedeni:
+
+Polinomlu integral hesaplamada kullandigimiz polinomun,bize verilen diger polinomlara kiyasla en uygun polinomdur.
+Yani bu polinomun korelasyon degeri, (kiyasladigimiz diger polinomlara gore) 1'e daha yakin oldugu icin sectik.
+Fakat bu polinomun da korelasyon degeri = 1 olmadigi icin gercek polinom degildir ve gercek sonuclari alamayacagiz.
+Integral hesaplarken kullandigimiz yamuklarin enini ne kadar kucultursek(deltax),gercek polinom ile yamuklar arasindaki bosluk azalicagi icin:
+Gercege daha yakin sonuclar hesaplanacaktir.
+
+ Polinomsuz hesaplama ve polinomlu hesaplamamizin farkli cikmasinin nedenleri bunlardir.
