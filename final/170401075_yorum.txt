@@ -1,0 +1,40 @@
+Polinom ile hesaplanan integral deðerinin, sadece veriler kullanýlarak hesaplanan integralden farklý olmasýnýn nedeni
+
+veriler.txt dosyasýndaki 82 veri ile bu verilere yakýnlaþtýrýlmýþ 3. dereceden polinomun grafiði =
+
+https://docs.google.com/document/d/1T4fCc_EfJvqSxVV2v3r5GfMOK-AvxNYWuWVaneQeeac/edit?usp=sharing
+
+Hesaplanan integral sonuçlarý =
+x------Ýntegral---------deltax--------sonuç--------------x
+---3.DerecedenPolinom---- 1 --------- 168344.61061761127 -
+x-----Polinomsuz--------- 1 --------- 163480.0 ----------x
+
+Ayný veriler kullanýlarak bu verilere yakýnlaþtýrýlmýþ 6. dereceden polinomun grafiði =
+
+https://docs.google.com/document/d/1Js7FGD9mL-VILaPGa2DWxvpF29_lUZTvErf2VQBXbIU/edit?usp=sharing
+
+Hesaplanan integral sonuçlarý =
+x------Ýntegral---------deltax--------sonuç--------------x
+---6.DerecedenPolinom---- 0.1 ------- 163278.0720913617 --
+x-----Polinomsuz--------- 1 --------- 163480.0 ----------x
+
+Ýntegral yönteminde deltax deðeri, polinomlu ve polinomsuz hesaplama için ayný deðer seçilse dahi hesaplanan sayýsal integral sonuçlarý farklý çýkmaktadýr.
+
+Hesaplanan integral sonuçlarý =
+x------Ýntegral---------deltax--------sonuç--------------x
+---6.DerecedenPolinom---- 1 --------- 163262.410470174 ---
+x-----Polinomsuz--------- 1 --------- 163480.0 ----------x
+
+Bu verilere uydurulan eðri, 1,2,3,4,5 ve 6. dereceli polinomlar arasýndan en uygun polinom seçilmiþ olmasýna raðmen, veri noktalarýný çoðunlukla tam olarak karþýlayamamaktadýr.
+
+Ayný veriler kullanýlarak bu verilere yakýnlaþtýrýlmýþ 9. dereceden polinomun grafiði =
+
+https://docs.google.com/document/d/1Lh28tj4sihWTrPUPBwBZlTW9uIedlYxa1tbcKVMwPHY/edit?usp=sharing
+
+Hesaplanan integral sonuçlarý =
+x------Ýntegral---------deltax--------sonuç--------------x
+---9.DerecedenPolinom---- 1 --------- 163599.01295433677 -
+x-----Polinomsuz--------- 1 --------- 163480.0 ----------x
+
+Sonuç =
+Yakýnlaþtýrma yapýlacak olan polinomlarýn derecelerinin küçük deðerlerde seçilmesi, sonucun hata payýný arttýrmaktadýr. Bu da integral sonuçlarýnýn arasýndaki farklarýn açýlmasýna sebep olmaktadýr. Bu durumda sonuçlarýn doðruluk payýný arttýrabilmemiz için polinomun uygun derecelerden seçilmesi önem arz etmektedir.
