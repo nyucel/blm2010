@@ -1,0 +1,1 @@
+integral hesabında h ı ne kadar küçük alırsak gerçek sonuca çok yaklaşmış oluruz. Polinom ile denklemin derecelerine bakıldığı için, gerçek sonuca polinomsuz integrale göre daha çok yaklaşılmış olacaktır. Aralarındaki fark bu sebeptendir.
