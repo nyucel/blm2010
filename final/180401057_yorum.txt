@@ -1,0 +1,5 @@
+Deltax ne kadar küçük olursa o kadar gerçek değere okadar yakın bir değer elde ederiz.
+ Çünkü polinomu dikdörtgenlere böleriz. Bu sayede dikdörgen alanllarından polinonu buluruz.
+Bu sayede deltax i ne kadar küçültürsek dikdortgenlerin alanıda bi okadar küçülücek ve daha hassas bir şekilde polinomu bulmuş olacağız.
+ Bununla birlikte, bu iki integral arasındaki farkın ana nedeni deltaks değildir, çünkü ilk integrali polinom haline getirdik, bu nedenle polinomu belirli sayıda korelasyona göre yaklaşıklaştırdık.
+ Bu nedenle, eşit deltax değerleri alınsa  bile sonuçların farklı olduğunu görüyoruz. 
