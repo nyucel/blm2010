@@ -1,0 +1,28 @@
+POLINOM KULLANARAK YAPILAN INTEGRAL HESABI ILE VERILER.TXT DOSYASINDAKI VERILER 
+KULLANILARAK YAPILAN INTEGRAL HESABININ FARKLI OLMASININ SEBEPLERI: 
+
+Integral, x=a ve x=b sınırları arasında f(x) fonksiyonu altında kalan alanin hesaplanması ile elde edilir.
+Öncelikle a, b aralığı daha alt aralıklara bölünür bu alt bölmelerin alanı (yaklaşık dikdörtgen şekilli) 
+hesaplanır ve bunlar toplanmak suretiyle toplam alan yaklaşık olarak hesaplanır. 
+
+Integrali alınacak fonksiyon polinom formunda olabileceği gibi deneysel verileri olan farklı noktalarda 
+x ve f(x) degerlerinin olduğu tablo seklinde bir fonksiyon da olabilir. (Biz de sorunun 2. adımında polinom 
+ile 3. adımında da veriler.txt dosyasındaki verileri kullanarak 2 farklı sekilde hesapladık.) 
+
+Sayısal integrallemede orjinal f(x) fonksiyonu yerine, interpolasyon fonksiyonu (n. mertebeden bir polinom)
+olan g(x) fonksiyonunu yerlestirerek integrali kolayca hesaplayabiliyoruz. Sayısal integrallemenin sonucunun doğruluğu
+bu yeni fonksiyonun orijinal fonksiyonu ne kadar iyi temsil ettiğine bağlıdır. Buyuzden hata oranı en düşük,
+en uygun polinomu kullanarak integral hesabi yapmak, en doğru sonuca daha da yaklasmamizi sağlayacaktır.
+
+*******************************
+Polinom ile Veri kullanarak yapılan iki hesaplamanın farklı sonuclar üretmesi doğaldır. Polinom kullanarak 
+yaptigimiz hesaplamadaki alt bölmelerin alanları gercege daha yakin bir sonuc üretmektedir. (Daha hassas bir 
+hesaplama yaptigimiz icin daha fazla alanı hesaplamaya dahil edip, daha az veri kaybı yasamış oluyoruz. 
+Bu sebeple; hata payı, veri kullanarak yaptigimiz integral hesabında  daha fazla oluyor. [a,b] aralığıni 
+çok sayıda alt aralığa bolerek duyarlıligi artirip iyileştirmeler yapabiliriz.  Ne kadar çok alt bölme alırsak 
+her bir bölmedeki hata o oranda küçüklecektir. Ancak  alt bölme sayisini artirdigimizda da daha fazla hesaplama 
+yaptigimize icin programın calışma suresi uzamaktadır.  Bu sebeple alt bölme sayisini belirlerken programimizin 
+performansını da göz önünde bulundurmamız gerekir.
+*******************************
+
+Sayısal integrallemeleri yaparken tercih ettigimiz yöntem: Trapez Kuralidir. (Yamuk Yontemi)
