@@ -138,7 +138,9 @@ uygun_polinom_derecesi=sr.index(sr_sirali[0])+1
 
 
 def f(x,polinom=katsayilar[uygun_polinom_indexi]):
-    p=polinom[0]+polinom[1]*x+polinom[2]*x**2+polinom[3]*x**3+polinom[4]*x**4+polinom[5]*x**5+polinom[6]*x**6
+    p = 0
+    for i in range(len(polinom)):
+        p += polinom[i] * (x ** i)
     return p
 
 def integralhes(n):
