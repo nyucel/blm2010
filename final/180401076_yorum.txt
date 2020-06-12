@@ -1,0 +1,10 @@
+süleyman yalçýnkaya
+180401076
+yamuk metodunuda hesaplamalarda kullandým
+Hesapladigimiz 2 integral deðeri birbirinden farklý  çikmistir.
+nedeni ise  ,
+Ýntegral Hesabi yapýlýrken , verilen polinomu küçük dikdörtgenlere bölerek ve bunlarýn alanlarýný toplayarak hesaplamaya çalýþýrýz.
+Deltax(dikdörtgenin eni) deðerini ne kadar küçültürsek ,iþleme katýlacak alan sayýsý artar ve  bulacaðýmýz deðer o kadar gerçeðe yakýn olur
+Ancak bu iki integral arasýndaki farkýn temel sebebi , birinci integrali  polinom haline getirirken
+belirli bir korelasyon sayýsýna göre polinoma yaklaþtýrmamýzdandýr.
+Bu sebepten, deltax deðerlerini eþit aldýðýmýzda bile sonuç farklý  olur.
