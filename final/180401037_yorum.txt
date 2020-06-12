@@ -1,0 +1,3 @@
+Gerçek veriler kullanılarak yapılan işlem sonucu ile polinom kullanılarak yapılan işlemin sonucu
+birbirinden farklı çıkmaktadır. Bunun sebebi polinom kullanarak bulduğumuz verilerin gerçekte
+olan verilerden farklı olmasıdır
