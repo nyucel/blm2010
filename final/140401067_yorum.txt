@@ -1,0 +1,4 @@
+Dikdörtgen yönteminde, DeltaX noktasından da x eksenine paralel doğru çizilerek ikinci dikdörtgen dilim elde edilir.
+ Bu şekilde devam edilerek her noktadan x eksenine paralel doğrular çizilir ve dikdörtgen dilimler elde edilir.
+ Yani, DeltaX ne kadar küçültülürse, işleme katılacak alan sayısı artar ve gerçeğe daha yakın değerler elde edilir ama işlem süresi uzar.
+ Polinomla yapılan işlemler yakınsama yoluyla yapıldığından sonuçlar farklı çıkmaktadır.
