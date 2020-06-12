@@ -1,0 +1,2 @@
+Polinomlu integral ve polinomsuz hesaplanan integral arasındaki farkın sebebi deltax dir.
+Polinomsuz olanda deltax i 1 aldığımız için gerçeğe daha uzak sonuç verir.
