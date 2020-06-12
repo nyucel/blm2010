@@ -1,0 +1,6 @@
+Adem YILMAZ - 160401069 
+Sonuclarin farkli cikmasinin nedeni: Polinomlu hesaplamada(yamuk yöntemi),
+polinoma uydurarak yapildigindan gercek polinom degeri olmadigi icin bu kadar farklı cikiyor ve,
+Polinomluda delta_x'i kucuk secebiliyoruz
+Polinomsuzda delta_x 1 seciyoruz
+Bu yuzden polinomluda daha hassas sekilde integrali hesaplayabiliyoruz fakat polinomsuzda daha hassas hesaplayamıyoruz
