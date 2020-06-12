@@ -1,0 +1,6 @@
+Polinomlu ve polinomsuz integralin değerlerinin farklı çıkmasının sebebi delta_x'e verilen değerdir.
+Çünkü integral polinomu küçük parçalara ayırarak alanlarını hesaplar.
+Bu sebeple delta_x küçüldükçe hesaplanan alan artar yani hesapladığımız alan gerçeğe daha da yaklaşır.
+Fakat deltax integral hesaplarındaki asıl farkı ortaya koymaz.
+Çünkü polinomlu ve polinomsuz integrallerdeki deltax değerini aynı bile versek sonucları farklı alırız.
+Bunun sebebi ilk integralimizi polinoma korelasyon sayısına göre yaklaştırmamızdır.
