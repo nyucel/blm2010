@@ -1,0 +1,5 @@
+Ahmet Furkan Kurt 170401002 
+Polinomlu integral gerçeğe daha yakın bir sonuç verir. 
+Çünkü polinomlu integralde deltax'i değerini değiştirebiliyoruz. 
+deltax'i küçültürsek hesaplayacağımız alan artacağı için hesapladığımız değer gerçeğe daha yakın olur.
+Ancak polinomsuz integralde istediğimiz parçaya bölemediğimiz için hata oranı daha yüksektir.
