@@ -1,0 +1,5 @@
+Bulduðumuz iki integral sonucunun farklý çýkmasýnýn sebebi;
+Polinom fonk. kullanarak aldýðýmýz integralin daha az hata payý ile deðer döndürmesi.
+Bunun nedeni ise, deltax(dikdörtgenin eni)'i küçük bi sayý aldýðýmýz için alanýný hesaplayacaðýmýz dikdörtgenler de çoðalmýþ olur ve yüksek hassasiyet ile deðer döndürür.
+Polinom fonk. kullanmadan alýnan integral de deltax'i 1 belirlediðimiz için alaný daha az parçaya böler ve daha az hassasiyet ile deðer döndürür.
+Polinom fonk. kullanmadan alýnan integral de deltax'i 1 almamýzýn nedeni ise verilerin birer birer artmasý ara bir deðeri almamasýdýr.

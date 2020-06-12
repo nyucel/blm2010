@@ -1,0 +1,24 @@
+İnterpolasyon sonucu 6. dereceden polinomda en düşük korelasyon olduğu hesaplanmıştır.
+Polinom kullanılarak alınan integral değeri: 164137.963578565
+Polinom kullanılmadan alınan integral değeri: 162714.0
+
+
+Yamuk yöntemi kullanarak elde ettiğimiz iki integral değerinin de 
+mutlak doğru alan sonuçları olmayacağı çok rahat bir şekilde belirtilebilir. 
+(Çünkü deltaX'i daha da küçülterek daha ayrıntılı sonuçlara ulaşabiliriz.)
+
+2. sorumuzda polinom ile yamuk yöntemi kullanılarak elde edilen ilk integrali hesaplarken, 
+veriler.txt'deki veriler ile interpolasyon yapılarak 6. dereceden bir polinomun en iyi 
+(1'e en yakın) korelasyon katsayısına sahip olduğu anlaşılmış, interpolasyon sonrasındaki 
+katsayılarla elde edilen polinomun integrali alınmış ve sonucunda ise 
+yaklaşık olarak 164138 değeri elde edilmiştir.
+
+3. sorumuzda veriler.txt dosyasında verilen değerler yani orjinal polinomun değer kümesinin 
+elemanları ile yamuk yöntemi kullanılarak elde ettiğimiz ikinci integrali hesaplarken bu 
+veri kümesi işlenmiş ve yaklaşık olarak 162714 değeri elde edilmiştir. 
+
+Elde edilen bu verilerden hareketle:
+İki integral değerinin de birbirine çok yakın olduğu görülmüştür. Fakat her ne kadar sonuçlar 
+birbirine yakın olsa da sonuçların aynı olmaması, 6. dereceden polinomun ancak belirli bir 
+korelasyon ile orjinal polinoma yakınsamasından kaynaklanmaktadır. Korelasyon katsayısı 1 olan
+en uygun polinom elde edilseydi, ancak o zaman birbiri ile örtüşen sonuçlar alınabilinirdi.

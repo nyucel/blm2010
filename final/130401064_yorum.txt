@@ -1,0 +1,20 @@
+Süleyman Baltacı 130401064
+
+1. maddede bulunan alan bize verilen verilere en iyi uyum gösteren yani RMSE'u en düşük olan polinomun a ile b noktaları arasındaki alanıdır.
+2. maddede bu veriler ışığında 1. 2. 3. 4. 5. ve 6. dereceden fonksiyonlar arasında en düşük RMSE'ye sahip olan polinom 6.dereceden polinom olmuştur.
+Bu polinomun altındaki alan bu polinomun integrali alınıp sınır değerleri verilerek bulunmuştur.
+
+Integral ile hesaplanan alan: 163278.2303344505
+
+çıkmıştır.
+
+3. maddede ise trapezoid (yamuk yöntemiyle) verilen verilerle alan bulunmuştur. Bu yöntemde her (x, x+1) aralığı küçük yamuklar olarak düşünülerek bu yamukların alanları toplanmıştır.
+Yani delta(A) = (f(x) + f(x+1)) / 2 ile küçük alanlar hesaplanıp toplanmıştır. 
+
+Trapezoid (yamuk) yontemi ile hesaplanan alan: 163262.41047016814
+
+çıkmıştır.
+
+Görüleceği üzere polinomun alanı ile yamuk yöntemiyle hesaplanan alan arasında 16 birim kare kadar bir fark çıkmıştır.
+Bu farkın nedeni küçük yamuk alanları hesaplanırken aynı aralıktaki polinom egrisiyle yamuk arasındaki alan farklarıdır. 
+Bu alan farklarının fazlalığı ya da azlığı toplamda böyle bir farka yol açmıştır.

@@ -1,0 +1,7 @@
+Polinomlar aracılığıyla hesaplamak istediğimiz değeri küçük dikdörtgenlere bölüp daha sonra bunların alanlarını toplayarak hesaplamalar yapılır.
+Ele aldığımız dikdörtgenlerin eni ne kadar küçük olursa, yani delta x değeri ne kadar küçük olursa o kadar daha fazla dikdörtgen alanı hesaplamış oluruz.Ve aradığımız sonuca çok daha yakın sonuçları böylelikle elde edebiliriz.
+Deltax olarak ele aldığımız değer aslında bizim dikdörtgenlerimizin en boyudur.
+Delta x değerini 1 alarak yaptığımız integral hesaplama ise polinomsuz hesaplamadır.
+Polinomlu ve polinomsuz alan hesaplamalarında birbirlerinden farklı sonuçlar verir.
+Bunun sebebi polinomlu olup olmamasına bağlı olarak değişen alan hesabının farklı olmasından dolayıdır.Polinomlu integral ile yapılan çözümler polinomsuz integral çözümüne göre aradığımız sonuca daha yakın bir sonuç verir sonucuna net bir şekilde ulaşabiliriz.Delta x değerinin artması durumunda hesaplanacak dikdörtgen sayısı öncekine göre artacağından yapılan işlemler daha fazla zaman alır.
+Delta x değerinin azalması durumunda ise hesaplanacak dikdörtgen sayısı azaldığı için hesaplama hızlı yapılacaktır fakat istenen sonuca yakın sonuç elde etme oranı azalır.

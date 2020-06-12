@@ -1,0 +1,5 @@
+ Yusuf Çimenci / 180401045
+            Ýki sonuç arasýnda fark olmasýnýn nedeni delta uzunluðu ve alaný bölmesinden kaynaklanýr.
+            yani delta yý ne kadar küçük tutarsak hesaplanan alan o kadar çok artar ve gerçeðe daha yakýn olur. 
+            kýsacasý grafikte görünen alanýn dah çoðunu kaplamýþ oluruz ve gerçeðe o kadar yaklaþýrýz. 
+            Polinom kullanmadan alýnan integral de deltax = 1 belirlediðimiz için alaný daha az parçaya böleceði için  az hassasiyeti azalýr .

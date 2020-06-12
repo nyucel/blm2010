@@ -1,0 +1,3 @@
+can kurttekin 170401015
+Polinomlu ve polinomsuz integral hesaplamalarýnda farklý sonuçlar çýkmasýnýn nedeni
+Polinomlu hesapta %100 uygun deðerlerle iþlem yapmýyoruz. Eðer hata 0 olsaydý ve 2 integral hesabýnda da delta x'i 1 alsaydýk ayný sonucu alýrdýk.

@@ -1,0 +1,6 @@
+# Sefa Karagöz - 150401075
+
+Dikdörtgen yönteminde, x eksenine paralel doğrular çizilerek dikdörtgen dilimler oluşur, bu
+oluşan dilimlerin alanlarının toplamı integralin değerini verir. Bu işlem sırasında delta değeri küçük veya n dilim
+sayısı büyük seçildikçe integrasyon sonucunun doğruluğu artmaktadır. Polinomsuz işlem ile arada oluşan farkın sebebi bu
+yüzdendir.

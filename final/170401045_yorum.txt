@@ -1,0 +1,6 @@
+(Oğuz BALKAYA 170401045)
+Polinomla ve polinomsuz hesaplanan integralin değerinin farklı çıkma sebebi aldığımız diktörtgenlerin enidir.
+İntegral hesabı yaparken verilen polinomu küçük dikdörtgenlere böler ve bu dikdörtgenlerin alanlarını hesaplayıp toplarız.
+Bu dikdörtgenlerin eni ne kadar küçük olursa okadar çok alan hesaplar ve integrale okadar çok yaklaşırız.
+Polinom ile hesaplamada denklem bilindiği için istediğimiz kadar küçük dikdörtgenlere bölebiliyoruz.Bu nedenle daha hassas bilgiler elde edebiliyoruz.
+Polinomsuz hesaplamada ise istediğimiz kadar parçaya bölemediğimiz için arada bu fark oluşuyor.
