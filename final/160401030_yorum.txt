@@ -1,0 +1,3 @@
+Polinomla yaklaşımda ve verilerle yaklaşımda sonuçlarının farklı çıkmasının sebebi deltaX'e bağlıdır.
+
+Polinomu kullanarak yaklaşım yaptığımızda deltaX'i çok küçük tutabiliriz ve hata payını deltaX'le doğru orantıyla azaltabiliriz; fakat verilerle yaklaşım yapabilmek için deltaX'in en küçük 1 olması gerekli. Verilerle yaklaşımda aralık fazla olduğu için hata payı yüksek olduğundan dolayı hassaslık polinomla yaklaşmamıza göre daha düşüktür. 
