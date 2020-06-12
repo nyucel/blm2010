@@ -1,0 +1,4 @@
+Harun Orhan 180401031 
+Yakınlastırma yapılacak olan polinom derecelerinin kucuk degerlerde secilmesi, sonucun hata payını arttırır. 
+Bu da integral sonuclarının arasındaki farkın büyümesine neden olur. 
+Boylece sonucların doğruluk payını arttırabilmek icin polinomu daha yuksek dereceden seçeriz. 
