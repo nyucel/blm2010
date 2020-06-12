@@ -1,3 +1,6 @@
+
+#Caner Kaya-160401074
+
 Polinomlu integral ile alan hesabı yaparken gerçek polinoma yaklaştırdığımız polinomun alan hesabını yaparız.
 Polinomsuz integralde ise gerçek polinomun altında kalan alanı yamuklara bölerek yamukların alanlarını toplarız.
 Delta x değeri yamukların en değeridir.Yani delta x küçüldükçe alanı daha fazla yamuğa böleriz ve hata payımız düşer.
