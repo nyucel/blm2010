@@ -1,0 +1,8 @@
+160401083
+Delta x değeri yamukların en değeridir.Delta x küçüldükçe alanı daha fazla yamuğa ayırırız ve hata payımız düşer.
+Polinom olmayan integralde  asıl polinomun altında kalan alanı yamuklara ayırarak yamukların alanlarını toplarız.
+polinom olmayan integralde asıl polinomu parçalara ayırarak her parçanın alanını bulmuş oluruz.
+Polinom her ne kadar doğrusal olmasa da çembere bile yeterince küçük ölçekte baktığımızda düz gibi olur.Polinomda
+ölçeği yani delta x değerini küçülterek doğrusala daha yakınmış gibi görür ve buna göre hesap yaparız bu da hata payımızı küçültür.
+Aradaki fark da buradan gelmektedir.Polinomlu integralde gerçek polinoma yakın bir polinomun alanını bulurken
+Polinom olan integral kullanarak yapılan alan hesabı  gerçek polinoma yaklaştırdığımızda polinomun alan hesabını yapmış oluruz.
