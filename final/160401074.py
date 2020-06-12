@@ -1,3 +1,7 @@
+
+#Caner Kaya-160401074
+
+
 def polinom_yaklastir(derece,verilerlist):
     matris=[]
     a=0
