@@ -1,0 +1,5 @@
+Uydurulan eğri kontrol noktalarından geçmek yerine tüm verilere uyum gösterebilecek şekilde 
+bir fonksiyon olduğundan gerçek veriler ile birebir eşit değildir.
+Ayrıca yamuk yöntemini uygularken eğri ile yamuk arasında kalan boşluktan veya 
+fazlalıktan dolayı elde edilecek integral değeri bir hata oluşturmaktar.
+Hata, deltax'e bağlıdır ve deltax küçültülerek hata değerini düşürmek mümkündür.
