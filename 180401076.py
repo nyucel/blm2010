@@ -1,135 +1,360 @@
-#180401076 Süleyman YALÇINKAYA
+# Süleyman Yalçınkaya 180401076
 
+print("\n")
+
+
+
+# veriler.txt dosyasına gider ve oradaki verilerin tamamını okur.
 
 with open("veriler.txt", "r", encoding='utf-8') as file:
-    list1 = []
+
+    dizi = []   #dizi oluşturuldu
+
     for i in file.read().split():
-        list1.append(int(i))
-genislik= len(list1)#veriler.txt dosyasındaki değerlerin uzunluğu
-toplam_veriler=sum(list1)
+
+        dizi.append(int(i))  #okunan verileri diziye eklendi
 
 
 
-def x_hesapla(genislik):
-    xKareToplam=[]
-    xKareToplam.append(genislik)
-    for j in range(1,13):
-        deger=0
-        for i in range(genislik):
-            deger += (i + 1) ** j
-        xKareToplam.append(deger)
-    return xKareToplam
+def size(dizi):
+
+    return len(dizi)
+
+n = size(dizi)   #
+
+  # kare matris oluşturma
+
+def karematris(calculateMATRIS):
+
+    dizi_m = calculateMATRIS.copy()
+
+    column = len(calculateMATRIS[0])
+
+    line = len(calculateMATRIS)
 
 
 
-def x_y_hesapla(genislik,list1):
-    xi_yi_toplam = []
-    xi_yi_toplam.append(sum(list1))
-    for i in range(1, 7, 1):
-        deger=0
-        for j in range(genislik):
-            deger += (j + 1) ** i * list1[j]
-        xi_yi_toplam.append(deger)
-    return xi_yi_toplam
 
 
-#gauss eleme yöntemi ile değerlerin bulunması
-def gauss_eleme(matris):
-    n = len(matris)
-    for i in range(0, n):
-        max = abs(matris[i][i])
-        maxSatir = i
-        for k in range(i + 1, n):
-            if abs(matris[k][i]) > max:
-                max = abs(matris[k][i])
-                maxSatir = k
-        for k in range(i, n + 1):
-            tmp = matris[maxSatir][k]
-            matris[maxSatir][k] = matris[i][k]
-            matris[i][k] = tmp
-        for k in range(i + 1, n):
-            c = -matris[k][i] / matris[i][i]
-            for j in range(i, n + 1):
-                if i == j:
-                    matris[k][j] = 0
-                else:
-                    matris[k][j] += c * matris[i][j]
-    sonuc = [0 for i in range(n)]
-    for i in range(n - 1, -1, -1):
-        sonuc[i] = matris[i][n] / matris[i][i]
-        for k in range(i - 1, -1, -1):
-            matris[k][n] -= matris[k][i] * sonuc[i]
-    return sonuc
+    # matris hesaplama
+
+    for s in range(line - 1):
+
+        for y in range(line - 1 - s):
+
+            multiplier = dizi_m[y][s] / dizi_m[y + 1][s]
+
+            for b in range(column):
+
+                dizi_m[y][b] += -multiplier * dizi_m[y + 1][b]
 
 
 
-#polinomun derecesine göre değer yaklaşılır ve matrisi hesaplanır
-def olustur_matris(genislik,list1,z):
-    x,y=x_hesapla(genislik),x_y_hesapla(genislik,list1)
-    matris,satir=[],0
-    for i in range(0,z):
-        ekleneceksatir=[]
-        for i in range(satir,z+satir):
-            ekleneceksatir.append(x[i])
-        ekleneceksatir.append(y[satir])
-        satir+=1
-        matris.append(ekleneceksatir)
-    return matris
+    # diagonal matris
+
+    for m in range(line - 1, 0, -1):
+
+        for n in range(line - 1, line - 1 - m, -1):
+
+            multiplier = dizi_m[n][m] / dizi_m[n - 1][m]
+
+            for h in range(column):
+
+                dizi_m[n][h] += -multiplier * dizi_m[n - 1][h]
+
+    cozum = []
+
+    for s in range(line - 1, -1, -1):
+
+        x = dizi_m[s][line] / dizi_m[s][line - s - 1]
+
+        cozum.append(x)
+
+    return cozum
+
+
+# y değerlerini hesaplandı
+
+def totalY(dizi):
+
+    y = sum(dizi)
+
+    return y
+
+
+totalyi = totalY(dizi)
+
+
+# xi toplamları tutan dizi
+
+def totalxi(n):
+
+    total_x_kare = [] #total_x_kare adında bir dizi olusturduk.
+
+    for j in range(1, 13, 1):
+
+        kare_x = 0     #kare_x in ilk değerini 0 a eşitledik.
+
+        for p in range(n):
+
+            kare_x += (p + 1) ** j  #dizideki eleman sayısı kadar, x lerin karelerini hesaplattık
+
+        total_x_kare.append(kare_x)
+
+    total_x_kare.insert(0, n)   #hesaplattığımız değerleri diziye ekledik
+
+    return total_x_kare
 
 
 
-#oluşan matrise a değerlerinin eklenmesi
-def iste(list1):
-    t = []
-    for i in range(2,8):
-
-        t.append(gauss_eleme(olustur_matris(len(list1),list1,i)))
-    return t
-matrix=iste(list1)
 
 
-#hesaplanan yeni değerlerin kolarasyonunun çıktı olarak verilmesi,sonuc.txt yazılması
+# (1,6) x^ derecelerini  tutan dizi
 
-with open("sonuc.txt","a",encoding='utf-8') as file:
-    artan = 1
-    for j in matrix:
-        t= len(j)
-        file.write(str(artan)+" .derece"+'\n')
-        for y in range(t):
-            file.write(str(j[y])+'\n')
-        file.write("Kolerasyon:"+str(lastArray[artan-1])+'\n')
-        artan +=1
-        file.write('\n')
-    file.write("verilerin en iyi oluşturulmuş kolerasyon değeri :"+str(lastArray[-1])+'\n')
+def xiyiToplam(n, dizi, totalY):
+
+    derece_x_totaly = []
+
+    for j in range(1, 7, 1): #6 polinom olduğu için 6 kere döndürdük.
+
+        deger = 0
+
+        for eleman in range(n):
+
+            deger += (eleman + 1) ** j * dizi[eleman]
+
+        derece_x_totaly.append(deger)
+
+    derece_x_totaly.insert(0, totalY)
+
+    return derece_x_totaly
 
 
-#oluşacak hata payını bulan fonksiyon
-def hesapla_kolerasyon(t,list1,n):
-    sr = 0
-    st = 0
-    toplam_veriler=sum(list1)
-    y = toplam_veriler/n
-    size = len(t)
+
+
+
+def value_of_a(n, dizi, m=8):#6. polinoma kadar gittiğimiz için 7 tane a değerin oluşacak; bu yüzden  m=8 e kadar döngü devam eder
+
+    cozum = []
+
+    total_x_kare = totalxi(n)
+
+    y = totalY(dizi)
+
+    derece_x_totaly = xiyiToplam(n, dizi, y)
+
+    for x in range(2, m, 1):
+
+        yenidizi = []
+
+        for i in range(x):
+
+            yenidizi.append([])
+
+            for j in range(x):
+
+                yenidizi[i].append(total_x_kare[j + i])
+
+            yenidizi[i].append(derece_x_totaly[i])
+
+            if (i == x - 1):
+
+                cozum.append(karematris(yenidizi))
+
+                yenidizi.clear()
+
+    return cozum
+
+
+deger_a = value_of_a(n, dizi)#n. derece polinomun a değerlerini bir dizi olarak tutar
+
+
+
+"""
+
+
+Ödevde aynı yönde artan veriler üzerinde işlem yaptığımız için korelasyon katsayısı 1'e en yakın olan
+
+polinomu, en uygun polinom olarak alacağız.
+
+"""
+
+
+
+def Hata_Hesaplama(x, dizi, n, totalY):#kolerasyon değerleri
+
+    S_R = 0
+
+    S_T = 0
+
+    y = totalY / n
+
+    size = len(x)
+
     for i in range(n):
-        temp = 0
+
+        gecici = 0
+
         for j in range(size):
+
             if j == 0:
-                temp +=t[j]
+
+                gecici += x[j]
+
             else:
-                temp += t[j]*(i+1)**j
-        sr +=(list1[i]-temp)**2
-        st +=(list1[i]-y)**2
-    r = ((st-sr)/st)**(1/2)
+
+                gecici += x[j] * (i + 1) ** j
+
+        S_R += (dizi[i] - gecici) ** 2
+
+        S_T += (dizi[i] - y) ** 2
+
+    r = ((S_T - S_R) / S_T) ** (1 / 2)
+
     return r
 
 
 
-ata_dizi=[]
-for i in range(0,6):
-    t=hesapla_kolerasyon(matrix[i],list1,genislik)
-    ata_dizi.append(t)
 
-lastArray = sorted(ata_dizi)
+KorelasyonValue = []
+
+for i in deger_a:
+
+    e = Hata_Hesaplama(i,dizi,n , totalyi)
+
+    KorelasyonValue.append(e)
 
 
 
+
+
+def en_iyi_kolerasyon(dizi):        #  Bu fonksiyon 1'e en yakın olan korelasyon değerini döndürür
+
+    sirali_dizi = sorted(dizi)      
+
+    biggest = sirali_dizi[-1]
+
+    b = 1
+
+    while (biggest != dizi[b - 1]):
+
+        b = b + 1
+
+    return b, biggest
+
+
+
+
+
+
+
+sayici, en_iyi_korelasyon_degeri = en_iyi_kolerasyon(KorelasyonValue)
+
+print("en düşük hata payı ile sonucu hesaplayanpolinomun derecesi ", sayici)
+
+print("en düşük hata payı ile sonucu hesaplayan korelasyon değeri  ", en_iyi_korelasyon_degeri)
+
+print("\n")
+
+polinom = deger_a[sayici - 1]
+
+
+
+def fonksiyon(w , polinom1 = polinom ):
+
+    u = polinom1
+
+    total_value = 0
+
+    for i in range(len(u)):
+
+        total_value += u[i] * (w ** i)
+
+    return total_value
+
+
+
+
+
+#2. soru için
+
+def polinom_ile_integral_hesaplama(n):
+
+    # okul numaram 180401076 olduğu için  a =6 aldım
+
+    a = 6
+
+    b = n
+
+    deltax = 0.001
+
+    integral = 0
+
+    size = int((b - a) / deltax)
+
+    for i in range(size):
+
+        integral += deltax * (fonksiyon(a) + fonksiyon(a + deltax)) / 2
+
+        a += deltax
+
+    print("Polinom ile hesaplanan sonuç  :  ", integral)
+
+
+
+
+
+
+#3. soru için
+def veriler_ile_integral_hesaplama(n, dizi):
+
+    # 180401076   a değerini  6 olarak aldım.
+
+    a = 6
+
+    b = n
+
+    integral = 0
+
+    for i in range(a - 1, b - 1):
+
+        integral += (dizi[i] + dizi[i + 1]) / 2
+
+    print("Veriler ile hesaplanan sonuç :  ", integral)
+
+
+
+
+def yorumlar():
+
+    with open("180401076_yorum.txt", "w", encoding='utf-8') as dosya :
+
+        dosya.write(" süleyman yalçınkaya \n")
+
+        dosya.write(" 180401076 \n")
+
+        dosya.write(" yamuk metodunuda hesaplamalarda kullandım\n ")
+
+        dosya.write("Hesapladigimiz 2 integral değeri birbirinden farklı  çikmistir. \n")
+
+        dosya.write("  nedeni ise , \n")
+
+        dosya.write("İntegral Hesabi yapılırken , verilen polinomu küçük dikdörtgenlere bölerek ve bunların alanlarını toplayarak hesaplamaya çalışırız. \n ")
+
+        dosya.write("Deltax(dikdörtgenin eni) değerini ne kadar küçültürsek ,işleme katılacak alan sayısı artar ve  bulacağımız değer o kadar gerçeğe yakın olur\n ")
+
+        dosya.write("Ancak bu iki integral arasındaki farkın temel sebebi , birinci integrali  polinom haline getirirken \n ")
+
+        dosya.write("belirli bir korelasyon sayısına göre polinoma yaklaştırmamızdandır.\n ")
+
+        dosya.write("Bu sebepten, deltax değerlerini eşit aldığımızda bile sonuç farklı  olur. \n ")
+
+
+
+
+
+polinom_ile_integral_hesaplama(n)
+
+veriler_ile_integral_hesaplama(n, dizi)
+
+yorumlar()
