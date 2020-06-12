@@ -1,5 +1,0 @@
-Sonuçlarýn farklý çýkmasýnýn sebebi deltax'e verilen deðerlerden kaynaklanýyor.Çünkü deltax'e 
-ne kadar küçük deðer verirsek grafiðin altýndaki alaný daha fazla parçaya böleriz ve bu parçalarýn grafikten 
-taþan ya da grafik ile arasýnda kalan boþ alanlar daha az olur.Böylece gerçeðe daha yakýn bir deðer elde ederiz.
-Polinom kullanmadan sadece verileri kullanýrken deltax 1 oluyor ama polinomu kullanýrken deltax'e 1'den daha küçük 
-bir deðer atayabiliriz.Ýþte bu yüzden polinom ile çözülen integral polinomsuza göre gerçeðe daha yakýndýr.
