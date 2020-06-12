@@ -1,0 +1,11 @@
+Kutay Kalmaz 180401025 
+
+Polinom yardımı ile delta_x' i küçülterek alanı genişletebildiğimiz için tarama alanı büyüyor. 
+
+Yani integral hesabı yapılırken polinom küçük dikdörtgenlere bölünerek alan toplamları hesaplanıyor. 
+
+Aldığımız dikdörtgenin eni ne kadar küçükse o kadar doğru alan hesabı ve o kadar doğru değer elde etmiş oluyoruz. 
+
+Bu nedenle polinomlu hesaplama, polinomsuz hesaplamaya göre daha gerçekçi sonuçlar karşımıza çıkarıyor. 
+
+              
