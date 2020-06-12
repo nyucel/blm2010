@@ -1,0 +1,9 @@
+Fatih Cihan Taskin 180401012
+İlk şıkta elimizdeki verilerin grafiğine 'en yakın' polinomu bulmuştuk
+Daha sonra o polinomun integralini hesaplattık
+Polinomlu integral hesaplanırken deltax ne kadar küçülürse o kadar yakın sonuç çıkacağını gördük
+Gerçek verilerle hesaplanan integralde deltax 1 alindi cünkü ara değerlerin karsiligini bilmiyorduk sadece tam degerlerin karsiligina sahiptik
+Gerçek verilerle hesaplanan integralde deltax 1 alındığı için eşit bir kıyas yapmak amacıyla polinomlu integralde de deltax 1 alındı
+Eşit koşullarda hesaplanan bu iki integralin arasında fark olmasının asıl nedeni bizim her ne kadar en yakın diye kabul ettiğimiz parabolün
+gerçek verilerin grafiğine tam olarak uymamasıdır.Yani biz 1,2,3,4,5,6 derece arasından en yakın polinomu bulduk ama gerçekte bu polinom bizim verilerimize çok yakın olmak zorunda değildir.
+Eğer korelasyon sayımız 1 olsaydı yani polinomumuz gerçek verilerle tamamen örtüşseydi böyle bir fark olmayacakti.

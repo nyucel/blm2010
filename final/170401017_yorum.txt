@@ -1,0 +1,5 @@
+İntegral alınırken dikdörtgenlerin eninin küçük olması onunla ters orantılı olarak o kadar fazla dikdörtgen alanı hesabını arttırır.
+Deltax burada en görevini görür ona verdiğimiz sayısal değerlerin değişimi yani 0.1 ve 1 farklı dikdörtgensel alan hesaplarına neden olur.
+Deltax değerini küçültürsek daha az hata payı veren veriler elde ederiz.Çünkü polinomlu yaklaşım vardır ve hata payını azalttığı için istenilen sonuca yaklaşırız.
+Aynı zamanda daha çok alan hesabı yapar ve sonuçlar farklı çıkar.
+ CEMRE DOĞAN 170401017

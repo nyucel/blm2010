@@ -1,0 +1,4 @@
+ Göksel AKTAÞ 170401033
+Polinomlu ve polinomsuz integral hesaplamalarýnda birbirinden farklý sonuçlar almamýzýn nedeni
+delta x için belirlenen deðerin uzunluðu ve elimizdeki verilerin belirlenen derecelerdeki polinoma %100 uygun olmadýðýndan kaynaklanmaktadýr.
+Eðer elimizdeli veriler hatasýz bir þekilde polinomumuza uysaydý ve 2 integral hesabýnda da deltaxi 1 alsaydýk ayný sonuca ulaþabilirdik.

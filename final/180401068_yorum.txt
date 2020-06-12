@@ -1,0 +1,9 @@
+Emirhan Akman 180401068
+Polinomlu ve polinomsuz hesaplanmış integraller farklı sonuclar verir.
+Bunun nedeni delta x için belirlediğimiz değerin uzunluğundandır.
+Delta x in degeri , hesaplanacak grafigin kac adet alana bölünecegini isaret eder.
+Delta x'i ne kadar küçük alırsak hesaplanması gereken alan sayısı o kadar artacagından
+Grafik ve alan arasubdaki bosluk ve grafik dısına tasmalar azalacaktır.
+Boylece hesapladıgımız deger, reel degerine olabildigince cok yaklasır.
+Polinomsuz hesaplamada ise grafigi böldügümüz alanı kendimiz belirlemedigimiz icin,
+boldugümüz alanlar ile grafik arasında tasmalar olusur, böylece hata artar

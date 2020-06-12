@@ -1,0 +1,10 @@
+Polinom kullanarak hesaplanan alan : 164007.53678720834
+Polinom kullanmadan hesaplanan alan : 163378.0
+Sonuçların farklı çıkma sebebi delta_x'e verdiğimiz değerden dolayıdır.
+delta_x ne kadar küçük olursa hesaplanan alan o kadar çok artar ve gerçeğe daha yakın olur.
+Grafik ile alan arasındaki boşluklar kapanır ve taşmalar azalır bu sebepten dolayı hata oranıda azalır.
+Polinomlu olan hesaplamada delta_x daha küçük olduğundan daha çok alan hesabı yapabiliyoruz. Bu da polinomsuza göre
+istenilen sonuca daha yakın bir cevap çıkarıyor.
+Polinomsuz olanda delta_x'i 1 alıyoruz bu da aslında sadece elimizdeki verileri kullandığımızı gösteriyor. Hata oranı daha fazla
+oluyor, taşmalar yaşanabiliyor. Sonuçların farklı çıkmasının nedenleri bunlardır.
+

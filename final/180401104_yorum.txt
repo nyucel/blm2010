@@ -1,0 +1,9 @@
+Mert BAYGIN  180401104
+Polinomlu ve polinomsuz olarak hesapladığımız integralin farklı sonuç döndürmesinin nedeni, 
+deltax için belirlediğimiz değerin uzunluğundan kaynaklanmaktadır. Burada deltax değeri hesaplanacak grafiğin 
+kaç adet alana bölünmesine denk gelir. Deltax değerini ne kadar küçük değer alırsak hesaplanması gereken
+alan sayısı artacağından grafik ile alanlar arasındaki boşluklar ve grafiğin dışına taşmalar oldukça azalıcaktır. 
+Bundan dolayı hesapladığımız değer gerçek değerini çok yaklaşacaktır.
+Polinomsuz hesaplama işleminde ise grafiği istediğimiz sayıda alana bölemediğimiz için böldüğümüz alanlar ile
+grafik arasında boşluklar ve grafikte taşmalar meydana geliyor bu sebepden dolayı hata oranı artıyor.
+Son olarak hesaplamalamarımda'yamuk' metodu kullandım.

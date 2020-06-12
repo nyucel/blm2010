@@ -124,19 +124,25 @@ def en_az_hata_hesapla(hm):
     en_az=9999999999999999                             #ilk küçük gelende değişmesi için böyle değer verildi.
     indis=0
     for i in range(6):
-        if sum(hm[i]) < en_az :
-            en_az = sum(hm[i])
+        kare_toplamları = 0
+        for j in hm[i]:
+            kare_toplamları = kare_toplamları + j ** 2  # ÖNCEKİ KODDA BURADA HATA VARDI FİXLEDİM.
+        if kare_toplamları < en_az:
+            en_az = kare_toplamları
             indis = i
-    return en_az,indis
+    return en_az, indis
 
 def en_az_hata_aralık(hm,x,y):
     en_az=9999999999999999                              #ilk küçük gelende değişmesi için böyle değer verildi.
     indis=0
     for i in range(6):
-        if sum(hm[i][x-1:y]) < en_az :
-            en_az = sum(hm[i][x-1:y])
+        kare_toplamları = 0
+        for j in hm[i][x - 1:y]:
+            kare_toplamları = kare_toplamları + j ** 2  # ÖNCEKİ KODDA BURADA HATA VARDI FİXLEDİM.
+        if kare_toplamları < en_az:
+            en_az = kare_toplamları
             indis = i
-    return en_az,indis
+    return en_az, indis
 
 print("Program çalışmaya başladı.")
 
