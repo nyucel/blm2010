@@ -1,0 +1,11 @@
+CEYDA KAMALI 180401054
+integral hesaplama işlemlerini yaparken yamuk metodunu kullandım.
+Yamuğun alanı, paralel kenarlarının uzunluklarının toplamının bu iki kenar arasındaki uzaklığın yarysı ile çarpımna eşittir.
+Deltax -----> Bulduğumuz alanlarının enine deltax denir. .
+Polinomlu integral hesabında deltax -----> Deltax değeri fonksiyonun kaç adet dikdörtgensel alana bölünceğini ifade eder.Deltax ile alan sayısı ters orantılıdır.Deltax azaldığı zaman dikdörtgensel alan sayısı artar , alan sayısının artmasıyla taşmalar engellenir bu sayede integral degerimiz gerçek degerine çok yaklasir. 
+
+
+Polinomsuz integral hesabında deltax ------>Polinomsuz integrali hesaplarken deltax değerini değiştiremiyoruz yani grafiği istediğimiz dikdörtgensel alanlara bölemiyoruz.Deltaxin başlangıçtaki değerine göre alan sayımız belirleniyor bu deltax değerini azaltamadığımızdan dolayı dikdörtgensel alan sayısı artmıyor,böldüğümüz alanlar ile grafik arasında taşmalar meydana geliyor,taşmalar meydana geldiğinden gerçek değerden uzaklaşıyoruz yani hata oranımız artıyor.
+
+
+Polinomlu integral ve Polinomsuz integralde değerleri aynı verdimki değerler arasındaki farkı görebilelim.
