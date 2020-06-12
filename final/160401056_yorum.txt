@@ -1,0 +1,6 @@
+Batuhan Şahin 160401056.
+3. ve 4. maddelerde farklı sonuç çıkma sebebi deltax değeridir.Deltax parçaladığımız parçaların enini ifade eder.
+Deltax azaldığı zaman parçaların alanı artıyor
+Polinomlu integral hesabında deltax az olduğu zaman alan artıyor ve bulduğumuz değer gerçek değerine yakınlaşıyor
+Polinomsuz integral hesabında deltax değeri değişmiyor alan değerimiz aynı kalıyor bu nedenle hata payı artıyor
+ 
