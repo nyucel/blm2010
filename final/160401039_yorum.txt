@@ -1,0 +1,16 @@
+160401039 Belkız Kuş
+
+Polinom kullanılarak hesaplanan integral ile polinomsuz hesaplanan integral değeri birbirinden farklıdır.
+
+Polinom ile hesaplanan integralde veriler.txt dosyasındaki veriler sırasıyla 1.,2.,3.,4.,5.,6. dereceden polinomlara
+yaklaştırılmış ve korelasyon değerlerine göre en uygun polinom bulunmuştur. Bu polinom Yamuk Yöntemi kullanılarak
+a=9 b=82 aralığında yüksekliği 0.1 olan yamuklara bölünmüştür.Bu yamukların alanlarının toplanmasıyla integral
+değeri bulunur. Gerçeğe en yakın sonucun bulanabilmesi, yani daha az taşma ve daha az hata için deltax(yamukların
+yüksekliği)'e sıfıra yakın değer verilir.
+
+Polinomsuz hesaplanan integralde ise veriler.txt dosyasındaki veriler direkt kullanılarak integral hesaplanmıştır.
+Elimizde ara değerler olmadığı için deltax 1 olarak alınmıştır.
+
+Bu iki integral değerinin farklı olmasının sebebi ise polinom ile hesaplanan integralde gerçek değerlerle değil
+verilerle yakınlaştırılmış ve korelasyon değerine göre en az hata ile uyan değerlerle oluşturulmuş polinomu
+kullanmamızdır. Bu nedenle her iki deltax'i eşit aldığımızda bile sonuçların farklı çıktığı görülmüştür.
