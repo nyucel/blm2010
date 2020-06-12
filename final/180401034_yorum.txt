@@ -1,0 +1,4 @@
+Ezgi Cengiz 18040134 
+Sonuclarin farkli cikmasinin nedeni polinom kullanarak yaptigimiz fonksiyonda deltaya cok kucuk degerler verebildigimiz icin tasmalar azaliyor ve gercege daha yakin sonuc elde ediyoruz.
+Verileri kullanarak yaptigimiz fonksiyonda ise deger araligina en az 1 verdigimiz icin hata payi daha cok artiyor
+
