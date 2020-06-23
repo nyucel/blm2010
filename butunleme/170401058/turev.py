@@ -90,8 +90,8 @@ için sayısal türev hesapladığımızda bile türev sonuçlarının aynı de�
     f.close()
 
 
-asallar = oku()
-katsayi = yardimci(asallar)
-turev_1()
-turev_2()
+asallar = oku() #veriler
+katsayi = yardimci(asallar) #3. dereceden polinomun katsayıları
+turev_1()   #polinomlu 
+turev_2()   #polinomsuz
 yorum()
