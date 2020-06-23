@@ -36,7 +36,8 @@ yardimci fonksiyona parametre olarak bu dizi gönderilir ve geriye dönecek kats
 katsayıların bulunması için yapılacak gerekli işlemler tekrar ucuncu_der fonksiyonun ilk parametresine -1 verilerek yapılır.
 turev_1 fonksiyonuyla 3. dereceden polinoma ait sayısal türev hesaplanır. Hesaplamalarda aralığı h 
 değişkeniyle arttırıp azaltarak istenen sonuç elde edilir.(varsayılan olarak 58)
-turev_2 fonksiyonuyla polinomsuz sayısal türev hesaplanır. Hesaplamalarda aralık en az 1 (h=1) olmalıdır.
+turev_2 fonksiyonuyla polinomsuz sayısal türev hesaplanır. (varsayılan olarak 58)
+Hesaplamalarda aralık en az 1 (h=1) olmalıdır.
 yorum fonksiyonu çağırılarak sayısal türev sonuçlarındaki farkın sebebi yorum.txt dosyasından okunabilir.
 
 
