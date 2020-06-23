@@ -1,3 +1,5 @@
+Şule Nur Yılmaz
+
 asallar.txt dosyasındaki verileri 3. dereceden polinoma yakınlaştıran ve istenilen x değerine göre 
 polinomlu ve polinomsuz 1. dereceden türevlerini bulan yazılım.
 
