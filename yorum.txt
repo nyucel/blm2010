@@ -1,8 +1,0 @@
- Şule Nur Yılmaz
- Polinomlu ve polinomsuz sayısal türev sonuçlarının farkının en büyük sebebi
-polinomlu sayısal türevde hesaplama yaparken aralığı istediğimiz ölçüde azaltarak gerçek sonuca
-çok daha yakın anlamlı bir sonuç bulabiliyor olmamız. Polinomsuz sayısal türevde en iyi ihtimalle aralığı (h=1)
-tutabilirken polinomlu sayısal türevde ara değerleri elimizde bulunan polinom ile hesaplayabileceğimizden
-aralığı çok daha küçük (örneğin h=0.1) tutabiliyoruz. 
- Bir diğer sebep ise elimizdeki polinom var olan gerçek değerleri (asal sayıları) vermediğinden aynı aralık (h=1)
-için sayısal türev hesapladığımızda bile türev sonuçlarının aynı değere sahip olmamasına sebep oluyor. 
