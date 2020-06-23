@@ -2,14 +2,17 @@ asallar.txt dosyasındaki verileri 3. dereceden polinoma yakınlaştıran ve ist
 polinomlu ve polinomsuz 1. dereceden türevlerini bulan yazılım.
 
 İçerisindeki fonksiyonlar:
+
 1. oku() 
 asallar.txt dosyasındaki verileri tam sayı olarak diziye atar ve geri döndürür.
+
 2. ucuncu_der(i,veri)
 parametreler:
 i --> metin dosyasındaki işlenen satır
 veri --> metin dosyasındaki işlenen satırdaki veri
 Alınan değerlerle matris verileri hesaplanır daha sonra matris hesaplanır ve 3. dereceden 
 polinomun katsayıları bulunur. Katsayı dizisini geri döndürür.
+
 3. yardimci(asallar)
 parametreler:
 asallar --> verilerin tutulduğu dizi
@@ -17,15 +20,19 @@ Dizi elemanlarını ve bulunduğu satırları ucuncu_der fonksiyonuna yollar. So
 elemanlar bittiğinde matris oluşturulduğunda matrisi çözüp 3. dereceden polinom katsayılarını
 bulmak için son kez ucuncu_der fonksiyonu çağrılır. Geriye dönecek katsayılar dizisi geriye 
 döndürülür.
+
 4. f(i)
 i --> istenen nokta
 3. dereceden polinomda istenen noktadaki değer geri döndürülür.
+
 5. turev_1(x=58)
 x --> istenen nokta
 Varsayılan olarak x=58 ken polinomlu sayısal türev ekrana yazılır.
+
 6. turev_2(x=58)
 x --> istenen nokta 
 Varsayılan olarak x=58 ken polinomsuz sayısal türev ekrana yazılır.
+
 7. yorum()
 Polinomlu ve polinomsuz sayısal türev değerlerinin farklı olmasının sebebini açıklayan fonksiyon.
 Açıklama yorum.txt dosyasına yazılır.
