@@ -1,0 +1,6 @@
+   
+# Fikret ÇAKIRLI 140401099
+ Polinom kullanırsak adım aralığının bir önemi yoktur. Hata oranı terim sayısına bağlı artacaktır.
+Polinom kullanmazsak h çok küçük olmalıdır ki türeve daha yakın bir değer bulabilelim.
+Kullanılan data ne kadar fazla olursa gerçek değere daha çok yaklaşılır.
+Bu nedenle hata değeri gerçeğine göre daha düşük olacaktır. 
