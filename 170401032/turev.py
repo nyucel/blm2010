@@ -77,7 +77,7 @@ def xi(uzunluk):
             deger += (j + 1) ** i
         xkare.append(deger)
     return xkare
-print(xi(len(primes)))
+print("xi Katsayıları: ",xi(len(primes)))
 
 
 # In[22]:
@@ -92,7 +92,7 @@ def xiyi(uzunluk,primes):
             q+=(j+1)**i*primes[j]
         xiyi.append(q)
     return xiyi
-print(xiyi(len(primes),primes))
+print("xiyi Katsayıları: ",xiyi(len(primes),primes))
 
 
 # In[23]:
@@ -137,15 +137,6 @@ mm.append(a0)
 mm.append(a1)
 mm.append(a2)
 mm.append(a3)
-mm
-
-
-# In[26]:
-
-
-correlation=korelasyon(mm,primes,len(primes))
-print(correlation)
-
 
 # In[27]:
 
@@ -153,7 +144,6 @@ print(correlation)
 a=32 #170401032/ Son iki basamak kullanıldı.
 def f(x):
     return (a0+a1*x+a2*(x**2)+a3*(x**3))
-print(f(32))
 
 
 # In[28]:
@@ -164,7 +154,7 @@ def turev(a):
     x0=a 
     h=0.001
     xprime=(f(x0)-f(x0-h))/h
-    print("Polinomun x=32 noktasında türevi: ",xprime)
+    print("Polinomlu x=32 noktasında türevi: ",xprime)
 print(turev(a))
 
 
