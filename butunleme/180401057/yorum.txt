@@ -1,0 +1,4 @@
+ Bu iki fonkiyonun  sonuçlarının farkının en önemli sebeplerinden biri polinomsuz türevde aralığı yani h değerini 
+1 tutabiliyoruz çünkü polinomsuz türevde h değeri önemli değil öenmli olan değer sayısıdır. polinomlu türevde 
+ise gerçeğe yaklaşmak için h değerimizi olabildiğince küçültmek isteriz. Çünkü ne kadar
+h değerini küçültürsek hesaplayacağımız alan daha küçük olur ve bu sayede daha hassas olçüm yapıp değerimizin gerçeğe daha yakın olmasını sağlarız.
