@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[17]:
 
 
 #600'den küçük asal sayılar;
@@ -12,10 +12,10 @@ for num in range(2,600):
             break
     else:
         primeNumbers.append(num)
-print(primeNumbers)
+#print(primeNumbers)
 
 
-# In[2]:
+# In[18]:
 
 
 file=open('asallar.txt', 'w')
@@ -25,7 +25,7 @@ for i in range(len(primeNumbers)):
     file.write("\n")
 
 
-# In[3]:
+# In[19]:
 
 
 with open("asallar.txt","r",encoding='utf-8') as file: #dosyadan verileri okuma yapıyorum
@@ -34,7 +34,7 @@ with open("asallar.txt","r",encoding='utf-8') as file: #dosyadan verileri okuma 
         primes.append(int(i))
 
 
-# In[4]:
+# In[20]:
 
 
 def gaussYontemi(matris):
@@ -65,7 +65,7 @@ def gaussYontemi(matris):
     return sonuc
 
 
-# In[5]:
+# In[21]:
 
 
 def xi(uzunluk):
@@ -80,7 +80,7 @@ def xi(uzunluk):
 print(xi(len(primes)))
 
 
-# In[6]:
+# In[22]:
 
 
 def xiyi(uzunluk,primes):
@@ -95,7 +95,7 @@ def xiyi(uzunluk,primes):
 print(xiyi(len(primes),primes))
 
 
-# In[7]:
+# In[23]:
 
 
 def matris(uzunluk,primes,sayac):
@@ -113,7 +113,7 @@ def matris(uzunluk,primes,sayac):
     return matris
 
 
-# In[8]:
+# In[24]:
 
 
 #Gauss Yöntemi ile çözülmüş asıl matrisim
@@ -123,7 +123,7 @@ def matrisOlustur(primes):
     return matrix
 
 
-# In[9]:
+# In[25]:
 
 
 m=matrisOlustur(primes) 
@@ -140,35 +140,14 @@ mm.append(a3)
 mm
 
 
-# In[10]:
-
-
-def korelasyon(matris,primes,uzunluk):#asıl değerler ile bizim bulduklarımızı bu fonksiyona sokup hata değeri hesaplatıyoruz
-    st,sr=0,0
-    yi=sum(primes) #asal sayılar toplamı
-    yort=yi/uzunluk #asallar ortalama
-    sizeofmatris=len(matris) #matrisin uzunluğu
-    for i in range(uzunluk):
-        gecici=0
-        for j in range(sizeofmatris):
-            if j==0:
-                gecici+=matris[j]
-            else:
-                gecici+=matris[j]*(i+1)**j
-        sr+=(primes[i]-gecici)**2
-        st +=(primes[i]-yi)**2
-    r=((st-sr)/st)**(1/2)
-    return r
-
-
-# In[11]:
+# In[26]:
 
 
 correlation=korelasyon(mm,primes,len(primes))
 print(correlation)
 
 
-# In[12]:
+# In[27]:
 
 
 a=32 #170401032/ Son iki basamak kullanıldı.
@@ -177,7 +156,7 @@ def f(x):
 print(f(32))
 
 
-# In[13]:
+# In[28]:
 
 
 #Geri Sonlu Farklar Yöntemini kullandım
@@ -189,7 +168,7 @@ def turev(a):
 print(turev(a))
 
 
-# In[14]:
+# In[29]:
 
 
 def turev2(a):
@@ -200,7 +179,7 @@ def turev2(a):
 print(turev2(a))
 
 
-# In[15]:
+# In[30]:
 
 
 def yorum():
@@ -213,14 +192,8 @@ def yorum():
     f.close()
 
 
-# In[16]:
+# In[31]:
 
 
 yorum()
-
-
-# In[ ]:
-
-
-
 
