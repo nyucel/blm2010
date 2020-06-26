@@ -6,4 +6,4 @@ Polinomlu ile Polinomsuz Türev Fonksiyonlarının Farklı Sonuçlar Vermesinin 
 
 Polinomlu Sayısal Türev: Aralığı istediğimiz ölçüde azaltabiliriz.Daha hassas bir ölçüm yaparız. Bu sebeple gerçek sonuca daha yakın bir sonuc elde edebiliyoruz.
 
-Polinomsuz Sayısal Türev: Aralığı istediğimiz değerlerde tutamıyoruz.Mühim olan h değil değerdir. Bu yuzden Polinomlu Sayısal Türevden farklı bir sonuç elde ediyoruz.
+Polinomsuz Sayısal Türev: Aralığı istediğimiz değerlerde tutamıyoruz.h değeri en iyi ihtimalle 1 olabiliyor. Bu yuzden Polinomlu Sayısal Türevden farklı bir sonuç elde ediyoruz.
