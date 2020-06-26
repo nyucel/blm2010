@@ -178,7 +178,7 @@ def yorum():
     f.write("""\nNUMARA:170401032\n""")
     f.write("""\nPolinomlu ile Polinomsuz Türev Fonksiyonlarının Farklı Sonuçlar Vermesinin Sebebi:""")
     f.write("""\n\nPolinomlu Sayısal Türev: Aralığı istediğimiz ölçüde azaltabiliriz.Daha hassas bir ölçüm yaparız. Bu sebeple gerçek sonuca daha yakın bir sonuc elde edebiliyoruz.""")
-    f.write("""\n\nPolinomsuz Sayısal Türev: Aralığı istediğimiz değerlerde tutamıyoruz.Mühim olan h değil değerdir. Bu yuzden Polinomlu Sayısal Türevden farklı bir sonuç elde ediyoruz.""")
+    f.write("""\n\nPolinomsuz Sayısal Türev: Aralığı istediğimiz değerlerde tutamıyoruz.h değeri en iyi ihtimalle 1 olabiliyor.. Bu yuzden Polinomlu Sayısal Türevden farklı bir sonuç elde ediyoruz.""")
     f.close()
 
 
