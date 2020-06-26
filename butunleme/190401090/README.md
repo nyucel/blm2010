@@ -16,7 +16,7 @@ sympy kütüphanesi import edilerek projede kullanılır.
 
 ## Projenin Çalışma Prensibi
 
-Yazmış olduğumuz kod içerisinde 8 farklı fonksiyon kullanılmıştır. Yazmış olduğum kodun kullanılış
+Yazmış olduğumuz kod içerisinde 9 farklı fonksiyon kullanılmıştır. Yazmış olduğum kodun kullanılış
 şeklini, kullanmış olduğum aşağıdaki fonksiyonları ve kullanılış amaçlarını anlatarak şöyle açıklayabiliriz:
 
 ### readFile():
@@ -35,6 +35,11 @@ matris oluşturmamız gerektiği için bu matrisi createMatrix() fonksiyonu ile 
 Gauss yöntemi sayesinde içerisinde hesaplamasını yapmış olduğumuz katsayıların değerleri bulunur
 ve bu değerler başta oluşturduğumuz coefficients dizisine aktarılır. Devamında ise bulduğumuz bu 
 katsayıların değerlerinin ekrana yazdırımı sağlanır.
+
+### writePolynomEquation(x):
+
+Bu fonksiyonumuzda ise 3. dereceden oluşturduğumuz polinom denklemi "equation" değişkenine atanır. 
+Daha sonra bu polinom denklemi sym.pprint ile günlük hayattaki kullanım şekline uygun olarak ekrana yazdırılır. 
 
 ### selectRowGetValue(row, rowValue):
 
