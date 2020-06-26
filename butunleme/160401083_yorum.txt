@@ -1,0 +1,9 @@
+Türevi polinom cinsinden alınca matematiksel yöntemler ile hesapladığımız için
+biz noktanın eğimini(türevini) kesin değerler ile hesaplarız.Türevi polinom ile 
+değil de fonksiyona ait hedef noktamız hariç gene fonksiyonun değerlerinden hesapladığımız
+taktirde hesap yaptığımız iki nokta arasında kalan noktamız için bir eğri oluşturur
+ve o eğrinin eğimini kabul ederiz.Bu şekilde nümerik yolla yaptığımız işlem
+bize gerçek türeve yakın bir değer gösterir. Asıl noktamızı arasına alacak şekilde
+seçtiğimiz iki nokta asıl noktamıza ne kadar yakınsa hesapladığımız türev değeri
+gerçek değere yani polinomu kullanarak hesapladığımız değere o kadar yakın olur.
+Bu sebeple iki yöntem arasında bir hata payı bulunur.
