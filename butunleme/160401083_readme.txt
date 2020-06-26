@@ -1,0 +1,25 @@
+Kodumuzu ilk satırdan son satıra doğru inceleyelim.
+
+1-) numpy kütüphanesini import ettik çünkü matris işlemlerinde gömülü C fonksiyonlarını kullanarak hem daha hızlı yapar hemde bizim için kolaylaştırılmış fonksiyonları bulunur.
+
+2-) asal fonksiyonu ile kaca_kadar sınırı ile belirlediğimiz (600) sayıya kadar asal sayıları asallar isimli listede bize return eder.
+
+3-) asallartxt değişkeni ile tuttuğumuz asallar.txt dosyası kodu çalıştırınca bulunduğumuz dizinde oluşturur.
+
+4-) asal sayıları string formatında dosyaya yazdırırız.
+
+5-) det fonksiyonu ile ileride kullanacağımız 3. dereceden polinomsal yaklaşım ile oluşturacağımız matrisin determinantını hesaplarız.
+
+6-) x_train listesinde indisleri Y_train listesinde asal sayılarımızı tutarız.
+
+7-)degree değerini input alırız. (Soru için 3 değerini alırız.)
+
+8-) Polinomsal yaklaşımda oluşturacağımız matrisin boyutu derece boyutundan bir büyük olduğu için dereceden bir büyük değerde bir kare matris oluştururuz.
+
+9-) sonuc değişkeninde asal sayıların 3. dereceden hesaplanmış değerlerini tutarız.
+
+10-)Notların 53. sayfasında bulunan ve örüntüye sahip olan matrisi oluştururuz ve determinant yardımı ile çözeriz. Bu sayede sayfa 53'de bulunan a0 a1 ve a2 sorumuz için a3 debulunacak derecede fonksiyonumuzun katsayılarını hesaplayıp yazıdırız.
+
+11-) f fonksiyonu yardımı ile fonksiyonu kullanarak türev hesaplarız.
+
+12-) polinomsuzTurev fonksiyonu ile  polinom olmadan türevi hesaplarız.
