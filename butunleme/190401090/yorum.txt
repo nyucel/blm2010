@@ -1,0 +1,8 @@
+Yapmış olduğumuz hesaplamalarda polinomlu ve polinomsuz olarak hesaplanan türev değerlerinin farklı
+olduğunu gördük. Bu farkın sebeplerinden birisi, polinomsuz bir şekilde yapmış olduğumuz türev hesabında
+hesaplama yaparken aldığımız aralık en iyi ihtimalle h=1 değeri olabildiğinden dolayı tam olarak istediğimiz
+sonuca yakın bir sonuç vermeyebilir. Fakat polinomlu bir şekilde yapmış olduğumuz türev hesaplamasında ise
+aralığı elimizdeki polinoma göre daha da daraltarak aradığımız gerçek sonuca daha yakın bir sonuç buluruz.
+Bu farka sebep olan ikincil bir durum ise, kullandığımız polinom ile üzerinde işlem yapmış olduğumuz
+asal sayı değerlerini birebir olarak vermediği için yaptığımız türev hesaplamaları sonuçlarının birbirinden
+farklı olmasına neden olmaktadır.
