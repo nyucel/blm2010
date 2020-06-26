@@ -191,11 +191,3 @@ def yorum():
 yorum()
 
 
-    f.close()
-
-
-# In[31]:
-
-
-yorum()
-
