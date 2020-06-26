@@ -42,7 +42,7 @@ Bu fonksiyonda ise parametre olarak satır(row) ve satırda bulunan asal sayı d
 alırız. "row" değeri 0 haricinde bir değer olduğu sürece bu hesaplamalar devam eder. "row" değeri
 0'a eşitlendiğinde ise else'e girilir ve bu kısımdaki işlemler yapılır.
 
-###function(x):
+### function(x):
 
 Bu fonksiyonda 3. dereceden polinomumuz tanımlanır. Bu polinom değerimiz derivativeWithPolynom()
 fonksiyonunda polinolu türev alma işlemi için kullanılacaktır.
