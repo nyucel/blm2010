@@ -24,8 +24,6 @@ matrisOlustur(primes): Olusan katsayılar matrisinin gaussYontemı ile
 çözülmüş halini döndüren ve asıl kullanacağımız olan matrisi
 olusturdugumuz fonksiyondur.
 
-korelasyon(matris,primes,uzunluk): Bu fonksiyon sayesinde gerçek
-değerler ile bizim bulduğumuz değerlerin hata oranını buluruz.
 
 f(x): Polinomumuzu olusturmamıza yarayan fonksiyondur.
 
