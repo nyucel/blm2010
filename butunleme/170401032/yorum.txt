@@ -1,0 +1,9 @@
+AD: Gökçe Nur
+SOYAD: Sarıcı
+NUMARA:170401032
+
+Polinomlu ile Polinomsuz Türev Fonksiyonlarının Farklı Sonuçlar Vermesinin Sebebi:
+
+Polinomlu Sayısal Türev: Aralığı istediğimiz ölçüde azaltabiliriz.Daha hassas bir ölçüm yaparız. Bu sebeple gerçek sonuca daha yakın bir sonuc elde edebiliyoruz.
+Polinomsuz Sayısal Türev: Aralığı istediğimiz değerlerde tutamıyoruz.h değeri en iyi ihtimalle 1 olabiliyor.Bu yuzden Polinomlu Sayısal Türevden farklı bir sonuç elde ediyoruz.
+
